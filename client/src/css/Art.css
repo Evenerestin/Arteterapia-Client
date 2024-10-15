@@ -1,0 +1,168 @@
+#art {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  /* padding-top: 1rem; */
+}
+
+#art .subpageNavigation {
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 5vh;
+  height: 100vh;
+  width: 100%;
+}
+
+/* #art .subpageNavigation::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  mask-image: url(/branches.svg);
+  background: url(/kier-in-sight-archives-shLU6SZfIQY-unsplash.jpg)
+    center/contain;
+  height: 100vh;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.1;
+} */
+
+@keyframes pulse {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+#art .wrapper {
+  padding-bottom: 5vh;
+  margin-top: 3rem;
+  position: relative;
+  height: 50vh;
+  height: 60vh;
+  width: 20vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: all 450ms ease-in-out;
+  /* border-radius: 0.5rem; */
+}
+
+#art .wrapper::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 50vh;
+  height: 60vh;
+  width: 20vw;
+  transition: all 450ms ease-in-out;
+  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#art .wrapper:hover::after {
+  background: rgba(20, 76, 99, 0.301);
+  background: rgb(0, 83, 127, 0.5);
+}
+
+#art .imageWrapper {
+  height: 50vh;
+  height: 70vh;
+  width: 20vw;
+  overflow: hidden;
+
+  transition: all 450ms ease-in-out;
+}
+
+#art .imageWrapper::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  height: 70%;
+  z-index: 5;
+  /* opacity: 0; */
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+#art img {
+  height: 50vh;
+  height: 70vh;
+  width: 20vw;
+  object-fit: cover;
+  object-position: center;
+
+  transition: all 450ms ease-in-out;
+}
+
+#art .headerWrapper {
+  position: absolute;
+  height: fit-content;
+  width: 20vw;
+  transition: all 450ms ease-in-out;
+  overflow: hidden;
+  bottom: 0;
+  padding-top: 50vh;
+  right: 0.5rem;
+  z-index: 5;
+}
+
+#art .headerWrapper h1 {
+  /* text-indent: 20%; */
+  /* color: rgb(255, 255, 255); */
+  font-size: 4rem;
+  font-family: "Poiret One", sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  text-align: start;
+  word-break: break-all;
+  transition: all 450ms ease-in-out;
+  padding: 0 1rem;
+}
+
+#art .wrapper:hover h1 {
+  transform: scale(0.8) translate(5rem, -50rem);
+  transform: scale(0.8) translateY(-50rem);
+}
+
+#art .textWrapper {
+  position: absolute;
+  height: fit-content;
+  width: 20vw;
+  right: 1rem;
+  transition: all 450ms ease-in-out;
+  overflow: hidden;
+  bottom: -50rem;
+  z-index: 5;
+}
+
+#art .textWrapper h2,
+#art .textWrapper p {
+  font-size: 2rem;
+  word-break: keep-all;
+  text-indent: 0;
+  text-align: right;
+  color: white;
+}
+
+#art .wrapper:hover,
+#art .wrapper:hover::after,
+#art .wrapper:hover .imageWrapper {
+  height: 60vh;
+  height: 80vh;
+}
+
+#art .wrapper:hover .textWrapper {
+  bottom: 50%;
+}
+
+#art .wrapper:hover img {
+  transform: scale(2);
+}
+
+#art .wrapper:hover {
+  /* transform: translateY(-5vh); */
+  cursor: pointer;
+}

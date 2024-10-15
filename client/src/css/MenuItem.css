@@ -1,0 +1,100 @@
+/* --------------------------- menuItem --------------------------- */
+
+nav .menuItem {
+  position: relative;
+}
+
+nav .menuItem button {
+  border-radius: 0;
+}
+
+nav .menuItem a.active button {
+  color: rgb(58, 155, 190);
+}
+
+nav .menuItem button::after {
+  position: absolute;
+  content: "";
+  bottom: 0.2rem;
+  left: 0;
+  background-color: rgb(177, 177, 177);
+  height: 1px;
+  width: 0;
+  transition: width 1s ease, background-color 0.6s ease;
+}
+
+nav .menuItem button:hover::after {
+  width: 100%;
+}
+
+nav .menuItem .dropdownItem button::after {
+  background-color: transparent;
+}
+
+/* --------------------------- dropdownItem --------------------------- */
+
+nav .menuItem .dropdownMenu {
+  width: 140%;
+  /* background: white; */
+  position: absolute;
+  overflow: hidden;
+  top: 100%;
+  left: -20%;
+  height: 0;
+  z-index: 10;
+  transition: height 0.5s ease-in-out;
+  border-radius: 0.2rem;
+}
+
+nav .dropdownMenu .dropdownItem:first-of-type button {
+  padding-top: 2rem;
+}
+
+nav .dropdownMenu .dropdownItem:last-of-type button {
+  padding-bottom: 2rem;
+}
+
+nav .menuItem:hover .dropdownMenu {
+  height: max-content;
+}
+
+nav .dropdownItem button {
+  font-size: 0.9rem;
+}
+
+/* --------------------------- menuItem & dropdownItem --------------------------- */
+
+nav .menuItem button,
+nav .dropdownItem button {
+  font-size: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  /* margin: 0; */
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+  font-weight: 400;
+  color: black;
+}
+
+nav .menuItem:hover .dropdownItem button {
+  color: black;
+}
+
+nav .menuItem:hover button,
+nav .menuItem:hover .dropdownItem:hover button {
+  color: rgb(177, 177, 177);
+  cursor: pointer;
+}
+
+nav .menuItem:hover a.active button,
+nav .dropdownItem:hover a.active button {
+  color: rgb(177, 177, 177);
+}

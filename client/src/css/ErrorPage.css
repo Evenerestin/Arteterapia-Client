@@ -1,0 +1,22 @@
+#notFound {
+    min-height: 100svh;
+    background: url("/errorBackground.jpg") top;
+    background-size: cover;
+    margin: 0 1rem;
+}
+
+#notFound .container {
+    width: auto;
+    margin-top: 3rem;
+    min-height: 40svh;
+    background-color: white;
+    /* border-radius: 1rem; */
+    padding: clamp(1rem, 5vh, 2rem) clamp(1rem, 5vw, 5rem);
+    padding: 2rem clamp(1rem, 10vw, 5rem);
+    padding: 2rem clamp(1rem, 15vw, 10rem);
+    justify-content: space-around;
+    border-radius: 0.1rem;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+}

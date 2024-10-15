@@ -1,0 +1,238 @@
+const mockData = [
+  {
+    category: "painting",
+    order: ["7"],
+    children: [
+      {
+        id: "1",
+        src: "/painting/painting1.jpg",
+        title: "painting1",
+        method: "method",
+      },
+      {
+        id: "2",
+        src: "/painting/painting2.jpg",
+        title: "painting2",
+        method: "method",
+      },
+      {
+        id: "3",
+        src: "/painting/painting3.jpg",
+        title: "painting3",
+        method: "method",
+      },
+      {
+        id: "4",
+        src: "/painting/painting4.jpg",
+        title: "painting4",
+        method: "method",
+      },
+      {
+        id: "5",
+        src: "/painting/painting5.jpg",
+        title: "painting5",
+        method: "method",
+      },
+      {
+        id: "6",
+        src: "/painting/painting6.jpg",
+        title: "painting6",
+        method: "method",
+      },
+      {
+        id: "7",
+        src: "/painting/painting7.jpg",
+        title: "painting7",
+        method: "method",
+      },
+      {
+        id: "8",
+        src: "/painting/painting8.jpg",
+        title: "painting8",
+        method: "method",
+      },
+      {
+        id: "9",
+        src: "/painting/painting9.jpg",
+        title: "painting9",
+        method: "method",
+      },
+      {
+        id: "10",
+        src: "/painting/painting10.jpg",
+        title: "painting10",
+        method: "method",
+      },
+      {
+        id: "11",
+        src: "/painting/painting11.jpg",
+        title: "painting11",
+        method: "method",
+      },
+      {
+        id: "12",
+        src: "/painting/painting12.jpg",
+        title: "painting12",
+        method: "method",
+      },
+      {
+        id: "13",
+        src: "/painting/painting13.jpg",
+        title: "painting13",
+        method: "method",
+      },
+      {
+        id: "14",
+        src: "/painting/painting14.jpg",
+        title: "painting14",
+        method: "method",
+      },
+      {
+        id: "15",
+        src: "/painting/painting15.jpg",
+        title: "painting15",
+        method: "method",
+      },
+      {
+        id: "16",
+        src: "/painting/painting16.jpg",
+        title: "painting16",
+        method: "method",
+      },
+      {
+        id: "17",
+        src: "/painting/painting17.jpg",
+        title: "painting17",
+        method: "method",
+      },
+      {
+        id: "18",
+        src: "/painting/painting18.jpg",
+        title: "painting18",
+        method: "method",
+      },
+    ],
+  },
+  {
+    category: "sculpture",
+    order: [],
+    children: [
+      {
+        id: "1",
+        src: "/sculpture/sculpture1.jpg",
+        title: "sculpture1",
+        method: "method",
+      },
+      {
+        id: "2",
+        src: "/sculpture/sculpture2.jpg",
+        title: "sculpture2",
+        method: "method",
+      },
+      {
+        id: "3",
+        src: "/sculpture/sculpture3.jpg",
+        title: "sculpture3",
+        method: "method",
+      },
+      {
+        id: "4",
+        src: "/sculpture/sculpture4.jpg",
+        title: "sculpture4",
+        method: "method",
+      },
+      {
+        id: "5",
+        src: "/sculpture/sculpture5.jpg",
+        title: "sculpture5",
+        method: "method",
+      },
+      {
+        id: "6",
+        src: "/sculpture/sculpture6.jpg",
+        title: "sculpture6",
+        method: "method",
+      },
+      {
+        id: "7",
+        src: "/sculpture/sculpture7.jpg",
+        title: "sculpture7",
+        method: "method",
+      },
+      {
+        id: "8",
+        src: "/sculpture/sculpture8.jpg",
+        title: "sculpture8",
+        method: "method",
+      },
+      {
+        id: "9",
+        src: "/sculpture/sculpture9.jpg",
+        title: "sculpture9",
+        method: "method",
+      },
+      {
+        id: "10",
+        src: "/sculpture/sculpture10.jpg",
+        title: "sculpture10",
+        method: "method",
+      },
+    ],
+  },
+  {
+    category: "ceramic",
+    order: [],
+    children: [
+      {
+        id: "1",
+        src: "/ceramic/ceramic1.jpg",
+        title: "ceramic1",
+        method: "method",
+      },
+      {
+        id: "2",
+        src: "/ceramic/ceramic2.jpg",
+        title: "ceramic2",
+        method: "method",
+      },
+      {
+        id: "3",
+        src: "/ceramic/ceramic3.jpg",
+        title: "ceramic3",
+        method: "method",
+      },
+      {
+        id: "4",
+        src: "/ceramic/ceramic4.jpg",
+        title: "ceramic4",
+        method: "method",
+      },
+      {
+        id: "5",
+        src: "/ceramic/ceramic5.jpg",
+        title: "ceramic5",
+        method: "method",
+      },
+      {
+        id: "6",
+        src: "/ceramic/ceramic6.jpg",
+        title: "ceramic6",
+        method: "method",
+      },
+      {
+        id: "7",
+        src: "/ceramic/ceramic7.jpg",
+        title: "ceramic7",
+        method: "method",
+      },
+      {
+        id: "8",
+        src: "/ceramic/ceramic8.jpg",
+        title: "ceramic8",
+        method: "method",
+      },
+    ],
+  },
+];
+
+export default mockData;

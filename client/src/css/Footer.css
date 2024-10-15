@@ -1,0 +1,47 @@
+footer {
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(7, 7, 7);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer .copyright {
+    align-items: center;
+}
+
+footer .copyright #logo {
+  height: 5vh;
+  width: auto;
+  fill: rgb(110, 110, 110);
+  margin-right: 2rem;
+}
+
+footer .copyright p {
+  font-size: 0.8rem;
+  color: rgb(110, 110, 110);
+}
+
+footer .footerNavigation button {
+  color: rgb(110, 110, 110);
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color 1s ease;
+  /* padding: 0 2rem 0 1rem; */
+}
+
+footer .footerNavigation button:hover {
+    color: white;
+}
+
+/* footer .footerNavigation {
+    height: 12vh;
+    flex-wrap: wrap;
+} */

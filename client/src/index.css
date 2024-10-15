@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  /* font-family: "Metrophobic", sans-serif; */
+  /* font-family: "Poiret One", sans-serif; */
+  /* font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300; */
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: "IM Fell Great Primer", serif;
+  font-family: "Poiret One", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-style: italic;
+  font-size: 5rem;
+  color: rgb(23, 23, 24);
+  text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+}
+
+h2,
+h3 {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: rgb(125, 175, 184);
+  /* color: rgb(173, 196, 217); */
+}
+
+h3 {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: rgb(100, 100, 100);
+  color: rgb(120, 120, 120);
+  color: rgb(135, 135, 135);
+  /* color: rgb(180, 180, 180); */
+  /* color: rgb(206, 206, 206); */
+}
+
+/* nav button {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
+  } */
+
+button {
+  font-family: "Moteserrat", sans-serif;
+  color: grey;
+  border-radius: 5rem;
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  border: 1px solid rgb(189, 189, 189);
+  cursor: pointer;
+  letter-spacing: 4px;
+}
+button:hover {
+  transition: background 0.2s ease;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  color: rgb(51, 108, 134);
+}
+
+/* label {
+  font-family: 'Montserrat', sans-serif;
+} */
+
+input {
+  height: 2.5rem;
+  width: auto;
+  padding: 0 3rem 0 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border: 1px solid rgb(189, 189, 189);
+  outline: none;
+  border-radius: 0.7rem;
+  /* border-radius: 2rem; */
+}
+
+.flex {
+  display: flex;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridCenter {
+  display: grid;
+  place-content: center;
+}
+
+:root {
+  --accent-primary: ;
+  --accent-secondary: ;
+  --light: rgb(241, 241, 241);
+  --dark: rgb(29, 29, 29);
+}

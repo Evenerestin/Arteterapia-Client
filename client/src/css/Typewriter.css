@@ -1,0 +1,34 @@
+ul {
+  list-style: none;
+  gap: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+/* ul li {
+  font-family: "Montserrat", sans-serif;
+} */
+
+.shown {
+  /* opacity: 1; */
+  display: inline;
+}
+
+.hidden {
+  /* opacity: 0; */
+  display: none;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.textCursor {
+  animation: blink 2s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
