@@ -40,6 +40,7 @@
   height: 50vh;
   height: 60vh;
   width: 20vw;
+  width: 25vw;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -55,6 +56,7 @@
   height: 50vh;
   height: 60vh;
   width: 20vw;
+  width: 25vw;
   transition: all 450ms ease-in-out;
   background: rgba(255, 255, 255, 0.2);
   background: rgba(0, 0, 0, 0.2);
@@ -69,6 +71,7 @@
   height: 50vh;
   height: 70vh;
   width: 20vw;
+  width: 25vw;
   overflow: hidden;
 
   transition: all 450ms ease-in-out;
@@ -91,6 +94,7 @@
   height: 50vh;
   height: 70vh;
   width: 20vw;
+  width: 25vw;
   object-fit: cover;
   object-position: center;
 
@@ -101,6 +105,7 @@
   position: absolute;
   height: fit-content;
   width: 20vw;
+  width: 25vw;
   transition: all 450ms ease-in-out;
   overflow: hidden;
   bottom: 0;
@@ -114,6 +119,7 @@
   /* color: rgb(255, 255, 255); */
   font-size: 4rem;
   font-family: "Poiret One", sans-serif;
+  color: rgb(45, 45, 45);
   text-transform: uppercase;
   text-align: right;
   text-align: start;

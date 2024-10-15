@@ -6,7 +6,7 @@ const Contact = () => {
     <div id="contact" className="flex">
       <div>
         {/* <img src="/vincent-tantardini-hWlvhJAxkIw-unsplash.jpg" alt="Zdjęcie z ze swoimi pracami" /> */}
-        <img src="/contact3.jpg" alt="Zdjęcie z ze swoimi pracami" />
+        <img src="/contactBackground.jpg" alt="Zdjęcie z ze swoimi pracami" />
         <div className="overlay"></div>
         <div className="imageDuplicate"></div>
         <h1>Kontakt</h1>

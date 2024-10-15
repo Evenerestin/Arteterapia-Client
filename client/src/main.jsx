@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root";
@@ -33,22 +32,6 @@ const router = createBrowserRouter([
           path: item.path,
           element: <CategoryGallery category={item.category} />, // Passing propsValue as prop
         })),
-        // path: "tworczosc",
-        // element: <Art />,
-        // children: [
-        //   {
-        //     path: "malarstwo",
-        //     element: <Paintings />,
-        //   },
-        //   {
-        //     path: "rzezba",
-        //     element: <Ceramics />,
-        //   },
-        //   {
-        //     path: "malarstwo",
-        //     element: <Ceramics />,
-        //   },
-        // ],
       },
       {
         path: "dydaktyka",
@@ -72,12 +55,6 @@ const router = createBrowserRouter([
       },
       {
         path: "panel",
-        // element: <Dashboard />,
-        // element: (
-        //   <ProtectedRoute>
-        //     <Dashboard />,
-        //   </ProtectedRoute>
-        // ),
         element: <ProtectedRoute element={<Dashboard />} />,
         children: ArtCategories.map((item) => ({
           path: item.path,

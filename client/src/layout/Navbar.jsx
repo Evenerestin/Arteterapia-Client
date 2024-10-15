@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 // import InstagramIcon from "../assets/InstagramIcon";
 import { InstagramIcon } from "../assets/ContactIcons";
 import Logo from "../assets/Logo";
-import MenuData from "../assets/MenuData";
+import MenuData from "../assets/MenuDataDraft";
 import "../css/Navbar.css";
 import useScroll from "../hooks/useScroll";
 import MenuItem from "./MenuItem";

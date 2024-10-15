@@ -1,10 +1,11 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-import MenuData from "../assets/MenuData";
+// import MenuData from "../assets/MenuData";
+import { ArtCategories } from "../config";
 import "../css/Art.css";
 
 const Art = () => {
   const location = useLocation();
-  const tworczoscItem = MenuData.find((item) => item.title === "Twórczość");
+  // const tworczoscItem = MenuData.find((item) => item.title === "Twórczość");
 
   const splitTitle = (title) => {
     const middleIndex = Math.floor(title.length / 2);
@@ -18,13 +19,14 @@ const Art = () => {
       {location.pathname === "/tworczosc" ? (
         <div id="art" className="flex">
           <div className="subpageNavigation flex">
-            {tworczoscItem.submenu.map((submenuItem, index) => {
-              const [firstPart, secondPart] = splitTitle(submenuItem.title);
+            {/* {tworczoscItem.submenu.map((submenuItem, index) => { */}
+            {ArtCategories.map((item, index) => {
+              const [firstPart, secondPart] = splitTitle(item.label);
               return (
                 <div key={index} className="wrapper">
                   <div className="imageWrapper">
-                    <Link to={submenuItem.url}>
-                      <img src={submenuItem.cover} alt="subpage cover" />
+                    <Link to={`tworczosc/${item.path}`}>
+                      <img src={item.cover} alt="subpage cover" />
                     </Link>
                   </div>
                   <div className="headerWrapper">
@@ -35,7 +37,7 @@ const Art = () => {
                     </h1>
                   </div>
                   <div className="textWrapper">
-                    <h2>{submenuItem.title}</h2>
+                    <h2>{item.label}</h2>
                     <p>zobacz prace →</p>
                   </div>
                 </div>
