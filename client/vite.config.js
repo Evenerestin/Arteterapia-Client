@@ -7,4 +7,7 @@ export default defineConfig({
   resolve: {
     mainFields: [],
   },
+  alias: {
+    'axios': 'axios/dist/browser/axios.cjs'
+  }
 });
