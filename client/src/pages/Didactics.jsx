@@ -8,7 +8,7 @@ const Didactics = () => {
           <div className="grain"></div>
         </div> */}
         <video autoPlay muted loop>
-          <source src="/didacticsHeader.mp4" type="video/mp4" />
+          <source src="/didacticsHeaderClipped.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </header>
@@ -20,7 +20,7 @@ const Didactics = () => {
             non illum ducimus? Ipsa repellat magni quae, id ex officia?
           </h2>
           <video muted controls>
-            <source src="/didacticsAsset.mp4" type="video/mp4" />
+            <source src="/didacticsAssetClipped.mp4" type="video/mp4" />
           </video>
         </div>
         {/* <div className="text flexColumn"> */}
