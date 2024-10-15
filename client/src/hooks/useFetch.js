@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import mockData from "../assets/mockData";
 import { BASE_URL } from "../config";
@@ -43,11 +43,22 @@ const useFetch = (category, useMockData = true) => {
           //1st method
           //   setOrder(mockObjects.map((obj) => obj.id));
         } else {
-          const response = await axios.get(
-            `${BASE_URL}/albums?type=${category}`
-          );
-          if (response.data === null || response.data.length === 0) {
+          // const response = await axios.get(
+          //   `${BASE_URL}/albums?type=${category}`
+          // );
+          // if (response.data === null || response.data.length === 0) {
+          //   console.log("No data from API");
+          const response = await fetch(`${BASE_URL}/albums?type=${category}`);
+
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+
+          const data = await response.json();
+
+          if (!data || data.length === 0) {
             console.log("No data from API");
+
           } else {
             setObjects(response.data.children);
             setOrder(response.data.order);

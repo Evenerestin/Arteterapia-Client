@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import mockData from "../assets/mockData";
 import { BASE_URL } from "../config";
@@ -15,7 +15,7 @@ const useFetch = (useMockData = true) => {
       try {
         if (useMockData) {
           const data = mockData;
-          const totalCategories  = data.length;
+          const totalCategories = data.length;
 
           const totalObjectsCount = data.reduce(
             (sum, category) => sum + category.children.length,
@@ -27,9 +27,15 @@ const useFetch = (useMockData = true) => {
           setCategoryCount(totalCategories);
           setTotalObjects(totalObjectsCount);
         } else {
-          // If fetching from backend API
-          const response = await axios.get(`${BASE_URL}/albums`);
-          const data = response.data;
+          // const response = await axios.get(`${BASE_URL}/albums`);
+          // const data = response.data;
+          const response = await fetch(`${BASE_URL}/albums`);
+
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+
+          const data = await response.json();
 
           if (!data || data.length === 0) {
             console.log("No data from API");
