@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo";
-import MenuData from "../assets/MenuDataDraft";
+import MenuData from "../MenuData";
 import "../css/Footer.css";
 
 const Footer = () => {

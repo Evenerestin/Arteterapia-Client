@@ -3,12 +3,12 @@
 // import { BASE_URL } from "../config";
 // import mockData from "../assets/mockData";
 import PropTypes from "prop-types";
-import "../css/CategoryDisplay.css";
+import "../css/CategoryGallery.css";
 import useFetch from "../hooks/useFetch";
 import useOrder from "../hooks/useOrder";
 import Error from "./Error";
 
-const CategoryDisplay = ({ category }) => {
+const CategoryGallery = ({ category }) => {
   // const mockObjects =
   //   mockData.find((item) => item.category === category)?.children || [];
   // console.log(mockObjects);
@@ -38,14 +38,14 @@ const CategoryDisplay = ({ category }) => {
   }
 
   return (
-    <div id="categoryDisplay" className="gridCenter">
-      <div className="container flex">
-        {/* {Array.isArray(mockObjects) && mockObjects.length > 0 ? ( // Check if mockObjects is an array and has elements */}
-        {/* mockObjects.map((object) => ( */}
+    <div id="categoryGallery">
+      <div className="container grid">
+      {/* <div className="container flex"> */}
         {Array.isArray(orderedObjects) && orderedObjects.length > 0 ? ( // Check if orderedObjects is an array and has elements
           orderedObjects.map((object) => (
-            <div key={object.id} className="categoryObject">
-              <p>{object.title}</p>
+            <div key={object.id} className="categoryObject flex">
+              {/* <p>{object.title}</p> */}
+              <img src={object.src} alt="" loading="lazy" />
             </div>
           ))
         ) : (
@@ -56,8 +56,8 @@ const CategoryDisplay = ({ category }) => {
   );
 };
 
-CategoryDisplay.propTypes = {
+CategoryGallery.propTypes = {
   category: PropTypes.string.isRequired,
 };
 
-export default CategoryDisplay;
+export default CategoryGallery;

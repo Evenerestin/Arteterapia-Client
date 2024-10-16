@@ -4,7 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 // import InstagramIcon from "../assets/InstagramIcon";
 import { InstagramIcon } from "../assets/ContactIcons";
 import Logo from "../assets/Logo";
-import MenuData from "../assets/MenuDataDraft";
+// import MenuData from "../assets/MenuDataDraft";
+import MenuData from "../MenuData";
 import "../css/Navbar.css";
 import useScroll from "../hooks/useScroll";
 import MenuItem from "./MenuItem";
@@ -26,8 +27,8 @@ const Navbar = () => {
       </Link>
       <div className="navigation flex">
         <ul className="flex menuItems">
-          {MenuData.map((itemData, index) => {
-            return <MenuItem itemData={itemData} key={index} />;
+          {MenuData.map((item, index) => {
+            return <MenuItem menuItem={item} key={index} />;
           })}
         </ul>
         <div className="socialIcons flex">

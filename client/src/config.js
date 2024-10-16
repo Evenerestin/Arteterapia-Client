@@ -1,4 +1,3 @@
-
 export const ArtCategories = [
   {
     path: "malarstwo",

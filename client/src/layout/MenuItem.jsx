@@ -2,26 +2,30 @@ import PropTypes from "prop-types";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "../css/MenuItem.css";
 
-const MenuItem = ({ itemData }) => {
+const MenuItem = ({ menuItem }) => {
   const location = useLocation();
   return (
-    <li className={`menuItem ${(location === itemData.url) ? "" : "active" }`} >
-      {itemData.submenu ? (
+    <li className={`menuItem ${location === menuItem.path ? "" : "active"}`}>
+      {menuItem.submenu ? (
         <div className="flexColumn">
-          <NavLink to={itemData.url}>
-            <button>{itemData.title}</button>
+          <NavLink to={menuItem.path}>
+            <button>{menuItem.label}</button>
           </NavLink>
           <div className="dropdownMenu flexColumn">
-            {itemData.submenu.map((submenuItem, index) => (
-              <Link key={index} to={submenuItem.url} className="dropdownItem">
-                <button>{submenuItem.title}</button>
+            {menuItem.submenu.map((submenuItem, index) => (
+              <Link
+                key={index}
+                to={`${menuItem.path}/${submenuItem.path}`}
+                className="dropdownItem"
+              >
+                <button>{submenuItem.label}</button>
               </Link>
             ))}
           </div>
         </div>
       ) : (
-        <NavLink to={itemData.url}>
-          <button>{itemData.title}</button>
+        <NavLink to={menuItem.path}>
+          <button>{menuItem.label}</button>
         </NavLink>
       )}
     </li>
@@ -29,13 +33,13 @@ const MenuItem = ({ itemData }) => {
 };
 
 MenuItem.propTypes = {
-  itemData: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    url: PropTypes.string,
+  menuItem: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    path: PropTypes.string,
     submenu: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
       })
     ),
   }).isRequired,
