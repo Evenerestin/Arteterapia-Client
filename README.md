@@ -16,10 +16,6 @@
 
 <br />
 
-<p>Currently working on adding a shop via Strapi</p>
-
-<br />
-
 <p>
   Business website for an individual client, <br />
   designed to showcase clients art portfolio as well as their teaching experience. <br />
