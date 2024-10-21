@@ -85,9 +85,11 @@
   width: 100%;
   height: 45%;
   height: 70%;
+  height: 60%;
   z-index: 5;
   /* opacity: 0; */
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.75) 60%, rgb(255, 255, 255));
 }
 
 #art img {
@@ -109,12 +111,14 @@
   transition: all 450ms ease-in-out;
   overflow: hidden;
   bottom: 0;
-  padding-top: 50vh;
+  padding-top: 70vh;
   right: 0.5rem;
   z-index: 5;
+  pointer-events: none;
 }
 
-#art .headerWrapper h1 {
+#art .headerWrapper h1,
+#art .headerWrapper span {
   /* text-indent: 20%; */
   /* color: rgb(255, 255, 255); */
   font-size: 4rem;
@@ -131,17 +135,20 @@
 #art .wrapper:hover h1 {
   transform: scale(0.8) translate(5rem, -50rem);
   transform: scale(0.8) translateY(-50rem);
+  transform: scale(0.8) translate(-3rem, -60rem);
 }
 
 #art .textWrapper {
   position: absolute;
   height: fit-content;
   width: 20vw;
+  width: 25vw;
   right: 1rem;
   transition: all 450ms ease-in-out;
   overflow: hidden;
   bottom: -50rem;
   z-index: 5;
+  pointer-events: none;
 }
 
 #art .textWrapper h2,

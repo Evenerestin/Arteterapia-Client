@@ -23,24 +23,42 @@ const Art = () => {
             {ArtCategories.map((item, index) => {
               const [firstPart, secondPart] = splitTitle(item.label);
               return (
-                <div key={index} className="wrapper">
-                  <div className="imageWrapper">
-                    <Link to={`tworczosc/${item.path}`}>
+                <Link key={index} to={`/tworczosc/${item.path}`}>
+                  <div className="wrapper">
+                    <div className="imageWrapper">
                       <img src={item.cover} alt="subpage cover" />
-                    </Link>
+                    </div>
+                    <div className="headerWrapper">
+                      <h1>
+                        <span>{firstPart}</span>
+                        <br />
+                        <span>{secondPart}</span>
+                      </h1>
+                    </div>
+                    <div className="textWrapper">
+                      <h2>{item.label}</h2>
+                      <p>zobacz prace →</p>
+                    </div>
                   </div>
-                  <div className="headerWrapper">
-                    <h1>
-                      <span>{firstPart}</span>
-                      <br />
-                      <span>{secondPart}</span>
-                    </h1>
-                  </div>
-                  <div className="textWrapper">
-                    <h2>{item.label}</h2>
-                    <p>zobacz prace →</p>
-                  </div>
-                </div>
+                </Link>
+                // <div key={index} className="wrapper">
+                //   <div className="imageWrapper">
+                //     <Link to={`tworczosc/${item.path}`}>
+                //       <img src={item.cover} alt="subpage cover" />
+                //     </Link>
+                //   </div>
+                //   <div className="headerWrapper">
+                //     <h1>
+                //       <span>{firstPart}</span>
+                //       <br />
+                //       <span>{secondPart}</span>
+                //     </h1>
+                //   </div>
+                //   <div className="textWrapper">
+                //     <h2>{item.label}</h2>
+                //     <p>zobacz prace →</p>
+                //   </div>
+                // </div>
               );
             })}
           </div>
