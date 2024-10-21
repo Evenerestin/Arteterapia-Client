@@ -1,4 +1,4 @@
-import { ArtCategories } from "./config";
+import { ArtCategories } from "../config";
 
 const MenuData = [
   {

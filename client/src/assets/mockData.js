@@ -1,7 +1,6 @@
 const mockData = [
   {
     category: "painting",
-    order: ["7"],
     children: [
       {
         id: "1",
@@ -115,7 +114,6 @@ const mockData = [
   },
   {
     category: "sculpture",
-    order: [],
     children: [
       {
         id: "1",
@@ -181,7 +179,6 @@ const mockData = [
   },
   {
     category: "ceramic",
-    order: [],
     children: [
       {
         id: "1",

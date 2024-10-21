@@ -1,11 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 // import GokIcon from "../assets/GokIcon";
-// import { useEffect, useState } from "react";
 // import InstagramIcon from "../assets/InstagramIcon";
 import { InstagramIcon } from "../assets/ContactIcons";
 import Logo from "../assets/Logo";
-// import MenuData from "../assets/MenuDataDraft";
-import MenuData from "../MenuData";
+import MenuData from "../assets/MenuData";
 import "../css/Navbar.css";
 import useScroll from "../hooks/useScroll";
 import MenuItem from "./MenuItem";
