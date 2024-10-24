@@ -6,11 +6,12 @@ import { ArtCategories } from "./config";
 import "./index.css";
 import About from "./pages/About";
 import Art from "./pages/Art";
-import CategoryGallery from "./pages/CategoryGallery";
 import Contact from "./pages/Contact";
 import Didactics from "./pages/Didactics";
+import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Shop from "./pages/Shop";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +27,12 @@ const router = createBrowserRouter([
         element: <Art />,
         children: ArtCategories.map((item) => ({
           path: item.path,
-          element: <CategoryGallery category={item.category} />, // Passing propsValue as prop
+          element: <Gallery category={item.category} />, // Passing propsValue as prop
         })),
+      },
+      {
+        path: "zamowienia",
+        element: <Shop />,
       },
       {
         path: "dydaktyka",

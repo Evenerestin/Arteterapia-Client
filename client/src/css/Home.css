@@ -1,12 +1,17 @@
-header {
+#home {
+  height: 100svh;
+  width: 100%;
+}
+
+#home header {
   position: relative;
   width: auto;
-  height: 100vh;
+  height: 100%;
   margin: 0 clamp(1rem, 4vw, 10rem);
   margin: 0 clamp(2rem, 12vw, 15rem);
 }
 
-header .background {
+#home header .background {
   position: absolute;
   top: 0;
   left: 0;
@@ -62,19 +67,19 @@ header .background {
   }
 } */
 
-header .siteTitle {
+#home header .siteTitle {
   position: absolute;
   top: 35%;
   left: clamp(2rem, 5vw, 24rem);
 }
 
-header ul {
+#home header ul {
   font-size: 5rem;
   font-weight: 800;
   color: white;
 }
 
-header h3 {
+#home header h3 {
   letter-spacing: 10px;
   line-height: 5rem;
   font-size: 1.5rem;

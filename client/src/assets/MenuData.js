@@ -4,10 +4,24 @@ const MenuData = [
   {
     label: "Twórczość",
     path: "/tworczosc",
+    // submenu: [
+    //   ...ArtCategories.map((item) => ({
+    //     path: item.path,
+    //     label: item.label,
+    //   })),
+    //   {
+    //     path: "zamowienia",
+    //     label: "Zamówienia",
+    //   },
+    // ],
     submenu: ArtCategories.map((item) => ({
       path: item.path,
       label: item.label,
     })),
+  },
+  {
+    label: "Zamówienia",
+    path: "/zamowienia",
   },
   {
     label: "Dydaktyka",
