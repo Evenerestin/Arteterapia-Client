@@ -33,7 +33,7 @@ const Shop = () => {
           ))}
         </div>
         <div className="background">
-          <img src="/shop1.jpg" alt="" />
+          <img src="/shopBackground.jpg" alt="" />
           <div className="overlay"></div>
         </div>
       </header>
