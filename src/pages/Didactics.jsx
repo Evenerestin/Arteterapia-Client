@@ -1,3 +1,4 @@
+import React from "react";
 import "../css/Didactics.css";
 
 const Didactics = () => {

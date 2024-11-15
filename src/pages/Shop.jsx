@@ -1,3 +1,4 @@
+import React from "react";
 import ShopHeading from "../components/ShopHeading";
 import "../css/Shop.css";
 import usePriced from "../hooks/usePriced";

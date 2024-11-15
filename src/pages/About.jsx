@@ -1,3 +1,4 @@
+import React from "react";
 import Signature from "../assets/Signature";
 import "../css/About.css";
 import useScroll from "../hooks/useScroll";
