@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import React from "react";
 import mockData from "../assets/mockData";
 import "../css/Gallery.css";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import Typewriter from "../components/Typewriter";
 import "../css/Home.css";
 

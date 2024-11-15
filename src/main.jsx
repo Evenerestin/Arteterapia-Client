@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root";
 import { ArtCategories } from "./config";
 import "./index.css";
@@ -14,8 +13,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Shop from "./pages/Shop";
 
-// const router = createBrowserRouter([
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,

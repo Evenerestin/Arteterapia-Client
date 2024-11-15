@@ -1,4 +1,3 @@
-import React from "react";
 import { InstagramIcon, MailIcon, PhoneIcon } from "../assets/ContactIcons";
 import "../css/Contact.css";
 
