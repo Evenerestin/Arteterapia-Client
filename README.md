@@ -4,7 +4,7 @@
 </h1>
 <h3>
   Business Website <br />
-  <a href="">Domain not chosen yet</a> <br />
+  <a href="https://arteterapia.netlify.app">Arteterapia</a> <br />
 </h3>
 
 <br />
