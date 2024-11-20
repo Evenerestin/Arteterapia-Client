@@ -1,6 +1,16 @@
+import { useGSAP } from "@gsap/react";
+import ImageSlider from "../components/ImageSlider";
+import { fadeFromBottom, fadeFromSides } from "../components/revealAnimations";
 import "../css/Didactics.css";
 
 const Didactics = () => {
+  useGSAP(() => {
+    fadeFromSides(".content", ".heading", "video");
+    // fadeFromRight(".videoAsset");
+    // fadeFromBottom(".text");
+    fadeFromBottom(".imageSlider");
+  });
+
   return (
     <div id="didactics">
       <header>
@@ -47,12 +57,21 @@ const Didactics = () => {
             neque pariatur quaerat. Perspiciatis, atque pariatur!
           </p>
         </div>
-        <div className="gallery flex">
+        <div className="imageSlider">
+          <ImageSlider />
+        </div>
+        {/* <div className="gallery flex">
+          <button className="controls" id="left">
+            <span>&lt;</span>
+          </button>
+          <button className="controls" id="right">
+            <span>&gt;</span>
+          </button>
           <img src="didacticsPhoto1.jpg" alt="" />
           <img src="didacticsPhoto2.jpg" alt="" />
           <img src="didacticsPhoto3.jpg" alt="" />
           <img src="didacticsPhoto4.jpg" alt="" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

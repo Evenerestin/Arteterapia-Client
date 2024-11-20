@@ -7,11 +7,11 @@ footer {
 }
 
 footer * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 footer .copyright {
-    align-items: center;
+  align-items: center;
 }
 
 footer .copyright #logo {
@@ -38,7 +38,7 @@ footer .footerNavigation button {
 }
 
 footer .footerNavigation button:hover {
-    color: white;
+  color: white;
 }
 
 /* footer .footerNavigation {

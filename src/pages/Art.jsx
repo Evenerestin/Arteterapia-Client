@@ -1,11 +1,11 @@
+import { useGSAP } from "@gsap/react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-// import MenuData from "../assets/MenuData";
+import { fadeFromTop } from "../components/revealAnimations";
 import { ArtCategories } from "../config";
 import "../css/Art.css";
 
 const Art = () => {
   const location = useLocation();
-  // const tworczoscItem = MenuData.find((item) => item.title === "Twórczość");
 
   const splitTitle = (title) => {
     const middleIndex = Math.floor(title.length / 2);
@@ -13,6 +13,10 @@ const Art = () => {
     const secondPart = title.slice(middleIndex);
     return [firstPart, secondPart];
   };
+
+  useGSAP(() => {
+    fadeFromTop(".subpageNavigation");
+  });
 
   return (
     <>

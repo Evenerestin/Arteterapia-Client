@@ -51,7 +51,7 @@
   position: absolute;
   width: 7rem;
   height: 7rem;
-  left: 52%;
+  left: 50%;
   bottom: 3rem;
   background: transparent;
   border-radius: 10rem;
@@ -69,8 +69,9 @@
 
 #about header a span {
   text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
-  transform: translate(60%, -15%) rotate(90deg);
+  /* transform: translate(50%, -15%) rotate(90deg); */
   display: inline-block;
+  transform: translate(25%, -12%) rotate(90deg);
   color: rgb(23, 23, 24);
 }
 

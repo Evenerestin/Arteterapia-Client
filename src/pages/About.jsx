@@ -1,9 +1,16 @@
+import { useGSAP } from "@gsap/react";
 import Signature from "../assets/Signature";
+import { fadeFromLeft } from "../components/revealAnimations";
 import "../css/About.css";
 import useScroll from "../hooks/useScroll";
 
 const About = () => {
   const isScrolled = useScroll();
+
+  useGSAP(() => {
+    fadeFromLeft("h1");
+  });
+
   return (
     <div id="about">
       <header className={`${isScrolled ? "scrolled" : ""}`}>

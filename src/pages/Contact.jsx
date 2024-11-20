@@ -1,21 +1,36 @@
-import { InstagramIcon, MailIcon, PhoneIcon } from "../assets/ContactIcons";
+// import { InstagramIcon, MailIcon, PhoneIcon } from "../assets/ContactIcons";
+import { useGSAP } from "@gsap/react";
+import { InstagramIcon, MailIcon } from "../assets/ContactIcons";
+import { fadeFromBottom, fadeFromRight } from "../components/revealAnimations";
 import "../css/Contact.css";
 
 const Contact = () => {
+  useGSAP(() => {
+    fadeFromBottom(".backgroundUpper");
+    fadeFromBottom(".backgroundLower");
+    fadeFromRight(".contactInformations");
+  });
+
   return (
     <div id="contact" className="flex">
       <div>
         {/* <img src="/vincent-tantardini-hWlvhJAxkIw-unsplash.jpg" alt="Zdjęcie z ze swoimi pracami" /> */}
-        <img src="/contactBackground.jpg" alt="Zdjęcie z ze swoimi pracami" />
-        <div className="overlay"></div>
-        <div className="imageDuplicate"></div>
+        <div className="backgroundUpper">
+          <img src="/contactBackground.jpg" alt="Zdjęcie obrazu ''" />
+          <div className="overlay"></div>
+        </div>
+        <div className="backgroundLower">
+          <img src="/contactBackground.jpg" alt="Zdjęcie obrazu ''" />
+          <div className="overlay"></div>
+          {/* <div className="imageDuplicate"></div> */}
+        </div>
         <h1>Kontakt</h1>
       </div>
       <div className="contactInformations flexColumn">
-        <div className="flex">
+        {/* <div className="flex">
           <PhoneIcon />
           <p>+48 000 000 000</p>
-        </div>
+        </div> */}
         <div className="flex">
           <MailIcon />
           <p>someone@example.com</p>
@@ -25,23 +40,6 @@ const Contact = () => {
           <p>arteterapia.akw</p>
         </div>
       </div>
-      {/* <div className="flexColumn">
-        <img src="/vincent-tantardini-hWlvhJAxkIw-unsplash.jpg" alt="" />
-        <div className="contactInformations flex">
-          <div className="flex">
-            <PhoneIcon />
-            <p>+48 000 000 000</p>
-          </div>
-          <div className="flex">
-            <MailIcon />
-            <p>someone@example.com</p>
-          </div>
-          <div className="flex">
-            <InstagramIcon />
-            <p>arteterapia.akw</p>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

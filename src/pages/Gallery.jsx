@@ -1,5 +1,7 @@
+import { useGSAP } from "@gsap/react";
 import PropTypes from "prop-types";
 import mockData from "../assets/mockData";
+import { fadeFromBottom } from "../components/revealAnimations";
 import "../css/Gallery.css";
 
 const Gallery = ({ category }) => {
@@ -8,6 +10,10 @@ const Gallery = ({ category }) => {
     mockData.find((object) => object.category === category)?.children || [];
 
   console.log(data);
+
+  useGSAP(() => {
+    fadeFromBottom(".objectContainer");
+  });
 
   return (
     <div id="gallery">
@@ -20,7 +26,11 @@ const Gallery = ({ category }) => {
                 {/* <p>{object.title}</p> */}
                 <img src={object.src} alt="" loading="lazy" />
                 <div className="data">
-                  <h3>{object.title}</h3>
+                  <h3>
+                    <span>&#10077;</span>
+                    {object.title}
+                    <span>&#10078;</span>
+                  </h3>
                   {/* <p>
                     {object.sizeX}&#215;{object.sizeY}
                   </p> */}

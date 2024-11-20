@@ -1,9 +1,17 @@
+import { useGSAP } from "@gsap/react";
+import { fadeFromSides, fadeFromBottom } from "../components/revealAnimations";
 import ShopHeading from "../components/ShopHeading";
 import "../css/Shop.css";
 import usePriced from "../hooks/usePriced";
 
 const Shop = () => {
   const availableItems = usePriced();
+
+  useGSAP(() => {
+    fadeFromBottom("header");
+    // fadeFromBottom(".heading");
+    fadeFromSides(".objectContainer", ".photo", ".info");
+  });
 
   if (!Array.isArray(availableItems) || availableItems.length <= 0) {
     return (
@@ -46,7 +54,7 @@ const Shop = () => {
           >
             {category.pricedItems.map((object) => (
               <div key={object.id} className="objectContainer flex">
-                <img src={object.src} alt={object.title} />
+                <img className="photo" src={object.src} alt={object.title} />
                 <div className="info">
                   {/* <span className="flex">
                     &#10077;<h1>{object.title}</h1>&#10078;

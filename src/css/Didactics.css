@@ -82,7 +82,7 @@
   position: relative;
 }
 
-#didactics .gallery::after {
+.gallery::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -91,13 +91,46 @@
   height: 40%;
   z-index: 5;
   /* opacity: 0; */
+  pointer-events: none;
   background: linear-gradient(rgba(30, 30, 30, 0), rgb(30, 30, 30));
 }
 
-#didactics .gallery img {
+.gallery img {
   width: 20vw;
   height: auto;
   /* height: 30vw; */
   object-fit: cover;
   /* aspect-ratio: 4/3; */
+}
+
+.gallery button.controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8rem;
+  width: 8rem;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  border-radius: 10rem;
+  border: none;
+  background: none;
+}
+
+.gallery .controls span {
+  font-size: 10rem;
+  color: white;
+  /* text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5); */
+  text-shadow: 0px 0px 30px black;
+}
+
+.gallery .controls#left {
+  /* left: clamp(1rem, 5vw, 3rem); */
+  left: 1rem;
+}
+
+.gallery .controls#right {
+  /* right: clamp(1rem, 5vw, 3rem); */
+  right: 1rem;
 }
