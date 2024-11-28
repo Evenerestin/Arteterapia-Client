@@ -8,7 +8,7 @@ const Didactics = () => {
     fadeFromSides(".content", ".heading", "video");
     // fadeFromRight(".videoAsset");
     // fadeFromBottom(".text");
-    fadeFromBottom(".imageSlider");
+    fadeFromBottom(".slider");
   });
 
   return (
@@ -57,7 +57,7 @@ const Didactics = () => {
             neque pariatur quaerat. Perspiciatis, atque pariatur!
           </p>
         </div>
-        <div className="imageSlider">
+        <div className="slider">
           <ImageSlider />
         </div>
         {/* <div className="gallery flex">
