@@ -2,7 +2,7 @@ const ShopHeading = () => {
   return (
     <div className="heading">
       <h1>Obrazy pełne natury, faktury i fikcji</h1>
-      <h3>Moje podejście do sztuki</h3>
+      <h2>Moje podejście do sztuki</h2>
       <p>
         Tworzenie obrazów to dla mnie nie tylko sposób na wyrażanie siebie, ale
         również na uchwycenie złożoności natury oraz jej harmonii z elementami

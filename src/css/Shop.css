@@ -9,10 +9,10 @@ html {
 
 #shop header {
   width: 100%;
-  height: 100svh;
+  min-height: 100svh;
   margin: 0;
   padding: 6rem 0 3rem;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   position: relative;
 }
@@ -23,21 +23,19 @@ html {
   margin: 0 auto 0 clamp(2rem, 7vw, 7rem);
   padding: 0;
   position: relative;
-  /* margin-top: 5rem; */
-  /* padding-bottom: 8rem; */
 }
 
 #shop header h1 {
   padding-bottom: clamp(1rem, 5vh, 5rem);
 }
 
-/* #shop header h2 { */
-#shop header .controls {
-  margin: 0 auto 0 clamp(5rem, 12vw, 12rem);
+/* #shop header h2 {
+  align-self: flex-start;
+  margin-left: clamp(2rem, 7vw, 7rem);
 }
+  
 
 #shop header h3 {
-  font-size: 1.1rem;
   letter-spacing: 1px;
   letter-spacing: 1px;
   text-indent: 0;
@@ -45,10 +43,27 @@ html {
   animation: unset;
   line-height: 1.5rem;
   padding: 1rem 0;
-}
+} */
 
 #shop header p {
   padding: 0.5rem 0;
+}
+
+/* #shop header h2 { */
+#shop header .controls {
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+  gap: 0.5rem;
+  flex: 1;
+  max-height: max-content;
+  flex-wrap: wrap;
+  margin: 2rem auto 0 clamp(5rem, 12vw, 12rem);
+}
+
+#shop header .controls a {
+  text-decoration: none;
+  overflow-x: hidden;
 }
 
 #shop header .availability > div {
@@ -56,25 +71,32 @@ html {
   padding-left: 5rem;
 }
 
-#shop header a {
-  text-decoration: none;
-  overflow-x: hidden;
-}
-
 #shop header button {
   align-items: center;
   gap: 1.5rem;
+  gap: 3rem;
   color: black;
   border: none;
   background: none;
-  font-size: 1.5rem;
-  font-size: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 0.7rem;
+  /* letter-spacing: 2px; */
+  padding: 0.5rem 3rem;
   text-transform: uppercase;
   font-family: "Poiret One", sans-serif;
+  transition: all 0.5s ease;
+}
+
+#shop header .controls a:hover button {
+  letter-spacing: 2rem;
+  margin-left: 2rem;
 }
 
 #shop header button span {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  color: black;
 }
 
 #shop header .background {
@@ -129,12 +151,12 @@ html {
   max-width: 55%;
   max-width: 60%;
   width: auto;
-  /* border-radius: 0.2rem; */
+  margin-top: 1.5rem;
 }
 
 #shop .objectContainer .info {
   padding-bottom: 5rem;
-  width: 50%;
+  max-width: 50%;
 }
 
 #shop .objectContainer .info h1 {
@@ -144,11 +166,6 @@ html {
   text-transform: capitalize;
   text-shadow: none;
 }
-
-/* #shop .objectContainer .info span {
-  align-items: center;
-  gap: 1rem;
-} */
 
 #shop .objectContainer .info h1 span:first-of-type {
   margin-right: 2rem;

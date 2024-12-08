@@ -24,7 +24,11 @@ const Contact = () => {
           <div className="overlay"></div>
           {/* <div className="imageDuplicate"></div> */}
         </div>
-        <h1>Kontakt</h1>
+        {/* <h1>Kontakt</h1> */}
+        <div className="heading">
+          <h1>Kontakt</h1>
+          <h3>Serdecznie zapraszam...</h3>
+        </div>
       </div>
       <div className="contactInformations flexColumn">
         {/* <div className="flex">
