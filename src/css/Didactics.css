@@ -71,13 +71,164 @@
   padding-bottom: 1rem;
 }
 
-#didactics .gallery {
+.swiper {
+  /* border-radius: 1rem; */
+  width: 90%;
+  height: 55vh;
+
+  --swiper-pagination-color: var(--accent-secondary);
+  --swiper-pagination-bottom: 2rem;
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: var(--accent-secondary);
+  --swiper-pagination-bullet-inactive-opacity: 0.7;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+}
+
+/* .swiper::after {
+  position: absolute;
+  content: "";
+  height: 60%;
+  width: 100%;
+  background: linear-gradient(rgba(30, 30, 30, 0) 0%, rgb(30, 30, 30) 100%);
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+} */
+
+.swiper .swiper-pagination {
+  z-index: 10;
+}
+
+.swiper .swiper-pagination-bullet {
+  border: 1px solid white;
+  background: grey;
+  opacity: 0.5;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background: rgb(125, 175, 184);
+  background: rgb(51, 108, 134);
+  opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 3rem;
+  --swiper-navigation-top-offset: 0%;
+  margin-top: 0;
+  width: var(--swiper-navigation-size);
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.swiper-button-prev {
+  left: 0;
+  /* background: linear-gradient(90deg, rgb(30, 30, 30) , rgba(30, 30, 30, 0)); */
+}
+.swiper-button-prev::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 10vw;
+  background: linear-gradient(
+    90deg,
+    rgb(30, 30, 30) 0%,
+    rgba(30, 30, 30, 0) 100%
+  );
+  top: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-next::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 10vw;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 30, 30, 0) 0%,
+    rgb(30, 30, 30) 100%
+  );
+  top: 0;
+  right: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.swiper-button-prev:hover::after {
+  transform: scale(1.5) translateX(0.5rem);
+  color: rgb(125, 175, 184);
+}
+.swiper-button-next:hover::after {
+  transform: scale(1.5) translateX(-0.5rem);
+  color: rgb(125, 175, 184);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-family: "IM Fell Great Primer", serif;
+  color: white;
+  font-size: var(--swiper-navigation-size);
+  margin-bottom: 0.7rem;
+  z-index: 10;
+  transition: all 0.5s ease-in-out;
+}
+
+.swiper-button-prev::after {
+  content: "<";
+  margin-right: 0;
+}
+
+.swiper-button-next::after {
+  content: ">";
+  margin-left: 0;
+}
+
+.swiper .swiper-slide .slideContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.1rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.swiper .swiper-slide .slideContainer .content {
+  position: absolute;
+  width: 55%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: clamp(1rem, 3vw, 3rem);
+}
+
+.swiper .swiper-slide .slideContainer .content h1 {
+  letter-spacing: 0px;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: var(--light);
+  line-height: 5rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.swiper .swiper-slide .slideContainer .content p {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
+  color: var(--light);
+  font-weight: 300;
+}
+
+/* #didactics .gallery {
   height: clamp(35rem, 40vh, 50rem);
   justify-content: space-evenly;
   position: relative;
 }
 
-.gallery::after {
+#didactics .gallery::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -89,13 +240,13 @@
   background: linear-gradient(rgba(30, 30, 30, 0), rgb(30, 30, 30));
 }
 
-.gallery img {
+#didactics .gallery img {
   width: 20vw;
   height: auto;
   object-fit: cover;
 }
 
-.gallery button.controls {
+#didactics .gallery button.controls {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -110,16 +261,16 @@
   background: none;
 }
 
-.gallery .controls span {
+#didactics .gallery .controls span {
   font-size: 10rem;
   color: white;
   text-shadow: 0px 0px 30px black;
 }
 
-.gallery .controls#left {
+#didactics .gallery .controls#left {
   left: 1rem;
 }
 
-.gallery .controls#right {
+#didactics .gallery .controls#right {
   right: 1rem;
-}
+} */
