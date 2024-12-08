@@ -20,8 +20,6 @@
   height: 70svh;
   object-fit: cover;
   opacity: 0.6;
-  /* max-height: 70svh; */
-  /* height: 90svh; */
 }
 
 #contact .backgroundLower {
@@ -29,7 +27,6 @@
   top: 50%;
   left: 110%;
   width: 45vw;
-  /* left: 110%; */
 }
 
 #contact .backgroundLower img {
@@ -44,10 +41,8 @@
   position: absolute;
   left: 0;
   width: 100%;
-  /* height: 45%; */
   height: 30%;
   z-index: 5;
-  /* opacity: 0; */
 }
 
 #contact .backgroundUpper .overlay {
@@ -60,57 +55,19 @@
   background: linear-gradient(rgba(255, 255, 255), rgb(255, 255, 255, 0));
 }
 
-/* #contact .imageDuplicate {
-  position: absolute;
-  background: url(/contactBackground.jpg);
-  width: 100%;
-  height: 100%;
-  width: 45vw;
-  background-size: 100%;
-  top: 50%;
-  left: 110%;
-  object-fit: cover;
-  z-index: -1;
-} */
-
-/* #contact .imageDuplicate::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 45%;
-  height: 50%;
-  z-index: 5;
-  background: linear-gradient(rgba(255, 255, 255), rgb(255, 255, 255, 0));
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 90%
-  );
-} */
-
-#contact h1 {
+/* #contact h1 {
   position: absolute;
   top: 2rem;
-  left: clamp(-10rem, -5vw, -2rem);
-  left: clamp(-8rem, -30%, -2rem);
-  left: 0;
   right: clamp(-15rem, -40%, -5rem);
   padding: 2rem;
   text-align: end;
-  /* font-family: "Poiret One", sans-serif;
-  color: rgb(48, 82, 102); */
-
-  /* color: rgb(73, 128, 160); */
-  /* font-family: "Poiret One", sans-serif; */
-  /* left: -30%; */
-  /* font-family: "IM Fell Great Primer", serif;
-  font-style: italic;
-  color: rgb(23, 23, 24);
-  text-transform: uppercase;
-  font-size: 5rem; */
+} */
+#contact .heading {
+  position: absolute;
+  top: 2rem;
+  right: clamp(-15rem, -40%, -5rem);
+  padding: 2rem;
+  text-align: end;
 }
 
 #contact .contactInformations {
@@ -120,7 +77,6 @@
   width: auto;
   margin-bottom: 15%;
   height: clamp(10rem, 10%, 30rem);
-  /* align-self: center; */
 }
 
 #contact .contactInformations > div {
@@ -128,8 +84,6 @@
 }
 
 #contact .contactInformations p {
-  /* font-family: "Montserrat", sans-serif; */
-  /* font-size: 1em; */
   letter-spacing: 3px;
   color: black;
 }
@@ -140,9 +94,6 @@
 #contact .contactInformations #mailIcon {
   width: 30px;
   height: 30px;
-  /* width: 35px; */
-  /* height: 35px; */
-  /* fill: black; */
   margin-right: 2rem;
 }
 

@@ -53,17 +53,16 @@ p {
   letter-spacing: 1px;
   font-weight: 500;
   font-size: 0.95rem;
-  color: rgb(100, 100, 100);
-  color: rgb(120, 120, 120);
   color: rgb(135, 135, 135);
-  /* color: rgb(180, 180, 180); */
-  /* color: rgb(206, 206, 206); */
 }
 
-/* nav button {
+span {
   font-family: "Montserrat", sans-serif;
-  font-family: "Montserrat Alternates", sans-serif;
-  } */
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: rgb(135, 135, 135);
+}
 
 button {
   font-family: "Moteserrat", sans-serif;
