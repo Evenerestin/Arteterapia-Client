@@ -239,6 +239,7 @@ const mockData = [
         src: "/ceramic/ceramic1.jpg",
         title: "ceramic1",
         method: "method",
+        price: "123",
       },
       {
         id: "2",
