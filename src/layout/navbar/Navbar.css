@@ -1,0 +1,64 @@
+nav {
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3vw;
+  width: 100%;
+  padding: 1rem 2.8rem;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: padding 0.5s ease;
+  /* box-shadow: 0 0 15px 1px rgb(0, 0, 0, 0.1); */
+}
+
+nav.scrolled {
+  position: fixed;
+  padding: 0.2rem 2.8rem;
+}
+
+nav.homePath {
+  padding: 1.5rem 6rem;
+  /* box-shadow: none; */
+}
+
+/* --------------------------- logo --------------------------- */
+
+nav .navLogo {
+  position: relative;
+  background: none;
+  border: none;
+  /* height: 5rem; */
+  /* width: auto; */
+}
+
+nav .navLogo #logo {
+  position: relative;
+  height: 3.5rem;
+  height: 3rem;
+  width: auto;
+  z-index: 15;
+  transition: height 0.5s ease;
+}
+
+nav.homePath .navLogo #logo {
+  height: 3.5rem;
+  height: 3rem;
+  /* fill: rgb(5, 75, 103); */
+  /* fill: grey; */
+}
+
+/* --------------------------- media queries --------------------------- */
+
+@media screen and (max-width: 1023px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+  nav.scrolled {
+    padding: 0.2rem 1.5rem;
+  }
+  nav.homePath {
+    padding: 1.5rem 2rem;
+  }
+}
