@@ -14,11 +14,16 @@ const Shop = () => {
 
   if (!Array.isArray(availableItems) || availableItems.length <= 0) {
     return (
-      <div id="shop">
+      <div id="shop" className="emptyStock">
         <header>
           <ShopHeading />
-          <h2>Niestety nie ma aktualnie żadnych prac dostępnych do kupna :(</h2>
-          <div className="background"></div>
+          <h3 className="emptyHeading">
+            Niestety, nie ma aktualnie żadnych dostępnych prac.
+          </h3>
+          <div className="background">
+            <img src="/shopBackground.jpg" alt="" />
+            <div className="overlay"></div>
+          </div>
         </header>
       </div>
     );

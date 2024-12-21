@@ -14,10 +14,6 @@ const ImageSlider = () => {
     "didacticsPhoto2.jpg",
     "didacticsPhoto3.jpg",
     "didacticsPhoto4.jpg",
-    "didacticsPhoto1.jpg",
-    "didacticsPhoto2.jpg",
-    "didacticsPhoto3.jpg",
-    "didacticsPhoto4.jpg",
   ];
 
   const slidesCount = mobile ? 1 : smallerDesktop ? 2 : largerDesktop ? 3 : 4;

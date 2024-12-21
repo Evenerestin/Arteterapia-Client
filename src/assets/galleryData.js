@@ -5,11 +5,11 @@ const galleryData = [
       {
         id: "1",
         src: "/painting/painting1.jpg",
-        title: "painting1 asd agsgdh ef asda s",
+        title: "painting1",
         method: "method",
         sizeX: "",
         sizeY: "",
-        price: "1111",
+        price: "",
       },
       {
         id: "2",
@@ -239,7 +239,7 @@ const galleryData = [
         src: "/ceramic/ceramic1.jpg",
         title: "ceramic1",
         method: "method",
-        price: "123",
+        price: "",
       },
       {
         id: "2",

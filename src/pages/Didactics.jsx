@@ -18,11 +18,11 @@ const Didactics = () => {
         </video>
       </header>
       <div className="content">
-        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Twórcze zajęcia dla każdego.</h1>
         <div className="heading flex">
           <h2>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis sit
-            non illum ducimus? Ipsa repellat magni quae, id ex officia?
+            Rozwijaj wyobraźnię i umiejętności artystyczne na warsztatach
+            plastycznych, które pobudzają kreatywność i inspirują do działania.
           </h2>
           <video muted controls>
             <source src="/didacticsAssetClipped.mp4" type="video/mp4" />
@@ -30,25 +30,19 @@ const Didactics = () => {
         </div>
         <div className="text">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            recusandae quae placeat pariatur aliquid. Sequi veritatis
-            perferendis natus officia? Eius labore veritatis corrupti maxime,
-            neque pariatur quaerat. Perspiciatis, atque pariatur!
+            Od wielu lat dzielę się swoją pasją do sztuki, prowadząc warsztaty
+            plastyczne dla każdej grupy wiekowej. Na swoje zajęcia zapraszam
+            zarówno dzieci,młodzież, jak i dorosłych.
           </p>
           <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
-            officiis!
+            Moim celem jest inspirowanie do odkrywania własnego potencjału
+            artystycznego :)
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            necessitatibus officia voluptates perferendis eos magni tempore
-            nobis vero corporis aliquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            recusandae quae placeat pariatur aliquid. Sequi veritatis
-            perferendis natus officia? Eius labore veritatis corrupti maxime,
-            neque pariatur quaerat. Perspiciatis, atque pariatur!
+            W trakcie zajęć uczestnicy poznają różnorodne techniki malarskie i
+            ceramiczne, ucząc się nie tylko warsztatu, ale także rozwijając
+            kreatywność i wyobraźnię. Atmosfera pracy jest zawsze swobodna i
+            sprzyjająca twórczości.
           </p>
         </div>
         <div className="slider">
