@@ -36,17 +36,11 @@ footer .footerNavigation button {
   transition: color 1s ease;
   font-size: 0.8rem;
   letter-spacing: 1px;
-  /* padding: 0 2rem 0 1rem; */
 }
 
 footer .footerNavigation button:hover {
   color: white;
 }
-
-/* footer .footerNavigation {
-    height: 12vh;
-    flex-wrap: wrap;
-} */
 
 /* --------------------------- media queries --------------------------- */
 
