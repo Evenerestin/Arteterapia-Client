@@ -3,19 +3,19 @@ export const artCategories = [
     path: "malarstwo",
     category: "painting",
     label: "Malarstwo",
-    cover: "/malarstwoMenu.jpg",
+    cover: "/paintingMenu.jpg",
   },
   {
     path: "rzezba",
     category: "sculpture",
     label: "Rzeźba",
-    cover: "/rzezbaMenu.jpg",
+    cover: "/sculptureMenu.jpg",
   },
   {
     path: "ceramika",
     category: "ceramic",
     label: "Ceramika",
-    cover: "/ceramikaMenu.jpg",
+    cover: "/ceramicsMenu.jpg",
   },
 ];
 

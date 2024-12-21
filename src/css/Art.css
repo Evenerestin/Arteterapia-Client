@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   overflow-y: hidden;
-  /* padding-top: 1rem; */
 }
 
 #art .subpageNavigation {
@@ -14,38 +13,16 @@
   width: 100%;
 }
 
-/* #art .subpageNavigation::after {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  mask-image: url(/branches.svg);
-  background: url(/kier-in-sight-archives-shLU6SZfIQY-unsplash.jpg)
-    center/contain;
-  height: 100vh;
-  width: 100%;
-  bottom: 0;
-  opacity: 0.1;
-} */
-
-@keyframes pulse {
-  50% {
-    opacity: 0.2;
-  }
-}
-
 #art .wrapper {
   padding-bottom: 5vh;
   margin-top: 3rem;
   position: relative;
-  height: 50vh;
   height: 60vh;
-  width: 20vw;
   width: 25vw;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   transition: all 450ms ease-in-out;
-  /* border-radius: 0.5rem; */
 }
 
 #art .wrapper::after {
@@ -53,24 +30,18 @@
   content: "";
   top: 0;
   left: 0;
-  height: 50vh;
   height: 60vh;
-  width: 20vw;
   width: 25vw;
   transition: all 450ms ease-in-out;
-  background: rgba(255, 255, 255, 0.2);
   background: rgba(0, 0, 0, 0.2);
 }
 
 #art .wrapper:hover::after {
-  background: rgba(20, 76, 99, 0.301);
   background: rgb(0, 83, 127, 0.5);
 }
 
 #art .imageWrapper {
-  height: 50vh;
   height: 70vh;
-  width: 20vw;
   width: 25vw;
   overflow: hidden;
 
@@ -83,11 +54,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 45%;
-  height: 70%;
   height: 60%;
   z-index: 5;
-  /* opacity: 0; */
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
   background: linear-gradient(
     rgba(255, 255, 255, 0),
@@ -123,8 +91,6 @@
 
 #art .headerWrapper h1,
 #art .headerWrapper span {
-  /* text-indent: 20%; */
-  /* color: rgb(255, 255, 255); */
   font-size: 4rem;
   font-family: "Poiret One", sans-serif;
   color: rgb(45, 45, 45);
@@ -180,7 +146,6 @@
 }
 
 #art .wrapper:hover {
-  /* transform: translateY(-5vh); */
   cursor: pointer;
 }
 
@@ -203,7 +168,6 @@
     height: 260dvh;
     gap: 0;
     padding-bottom: 2rem;
-    /* padding: 5vh 0; */
   }
   #art .wrapper {
     margin: 0;
