@@ -5,7 +5,7 @@ const Signature = () => {
       id="signature"
       width="450px"
       height="120px"
-      viewBox="0 0 200px 0"
+      viewBox="0 0 200 0"
       preserveAspectRatio="xMidYMid meet"
     >
       <metadata>
