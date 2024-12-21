@@ -29,7 +29,6 @@ const Shop = () => {
     <div id="shop">
       <header className="flexColumn">
         <ShopHeading />
-        {/* <h2>Serdecznie zapraszam :)</h2> */}
         <div className="controls">
           {availableItems.map((category, index) => (
             <a key={index} href={`#${category.label}`}>
@@ -56,9 +55,7 @@ const Shop = () => {
               <div key={object.id} className="objectContainer flex">
                 <img className="photo" src={object.src} alt={object.title} />
                 <div className="info">
-                  {/* <span className="flex">
-                    &#10077;<h1>{object.title}</h1>&#10078;
-                  </span> */}
+                  {/* <h1>&#10077;{object.title}&#10078;</h1> */}
                   <h1>
                     <span>&#10077;</span>
                     {object.title}

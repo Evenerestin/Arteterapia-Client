@@ -23,7 +23,6 @@ const Art = () => {
       {location.pathname === "/tworczosc" ? (
         <div id="art" className="flex">
           <div className="subpageNavigation flex">
-            {/* {tworczoscItem.submenu.map((submenuItem, index) => { */}
             {ArtCategories.map((item, index) => {
               const [firstPart, secondPart] = splitTitle(item.label);
               return (

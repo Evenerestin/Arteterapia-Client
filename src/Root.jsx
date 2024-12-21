@@ -1,17 +1,14 @@
-import { Outlet, useLocation } from "react-router-dom";
-import Footer from "./layout/Footer";
-import Navbar from "./layout/Navbar";
+import { Outlet } from "react-router-dom";
+import Footer from "./layout/footer/Footer";
+import Navbar from "./layout/navbar/Navbar";
 
 const Root = () => {
-  const location = useLocation();
-  const isPanel = location.pathname.startsWith("/panel");
   return (
-    <div>
-      {/* <Navbar /> */}
-      {isPanel ? "" : <Navbar />}
+    <>
+      <Navbar />
       <Outlet />
-      {location.pathname === "/" || isPanel ? null : <Footer />}
-    </div>
+      <Footer />
+    </>
   );
 };
 

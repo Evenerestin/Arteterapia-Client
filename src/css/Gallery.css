@@ -73,34 +73,10 @@ html {
   padding: 0.4rem;
 }
 
-/* #gallery .categoryObject:hover img {
-  transform: scale(2);
+@media screen and (max-width: 1023px) {
+  #gallery .container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 10vh, 10rem);
+  }
 }
-
-#gallery .dataOverlay {
-  position: absolute;
-  background: rgb(255, 255, 255, 0.8);
-  background: linear-gradient(rgb(255, 255, 255, 1), rgb(255, 255, 255, 0.7));
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  transition: all 1s ease;
-  padding: 2rem 1rem 3rem;
-  justify-content: space-between;
-  backdrop-filter: blur(1px);
-} 
-
-#gallery .categoryObject:hover .dataOverlay {
-  opacity: 1;
-}
-
-#gallery .dataOverlay h1 {
-  font-size: 2rem;
-}
-
-#gallery .dataOverlay .isForSale {
-  justify-self: end;
-} */

@@ -166,3 +166,14 @@ nav#desktop .menuItem:hover a.dropdownItem {
 nav#desktop .menuItem:hover a.dropdownItem:hover {
   color: rgb(177, 177, 177);
 }
+
+/* --------------------------- media queries --------------------------- */
+
+@media screen and (max-width: 1300px) {
+  nav#desktop .navigation .menuItems {
+    margin-right: 0;
+  }
+  nav#desktop .menuItem a {
+    padding: 1rem 0.7rem;
+  }
+}

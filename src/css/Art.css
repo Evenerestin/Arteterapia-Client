@@ -89,7 +89,11 @@
   z-index: 5;
   /* opacity: 0; */
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
-  background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.75) 60%, rgb(255, 255, 255));
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255, 0.75) 60%,
+    rgb(255, 255, 255)
+  );
 }
 
 #art img {
@@ -135,7 +139,7 @@
 #art .wrapper:hover h1 {
   transform: scale(0.8) translate(5rem, -50rem);
   transform: scale(0.8) translateY(-50rem);
-  transform: scale(0.8) translate(-3rem, -60rem);
+  transform: scale(0.8) translate(-3rem, -100rem);
 }
 
 #art .textWrapper {
@@ -178,4 +182,55 @@
 #art .wrapper:hover {
   /* transform: translateY(-5vh); */
   cursor: pointer;
+}
+
+/* --------------------------- media queries --------------------------- */
+
+@media screen and (max-width: 1300px) {
+  #art .headerWrapper h1,
+  #art .headerWrapper span {
+    font-size: 3rem;
+  }
+  #art .textWrapper p {
+    font-size: 1.5rem;
+    white-space: wrap;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #art .subpageNavigation {
+    flex-direction: column;
+    height: 260dvh;
+    gap: 0;
+    padding-bottom: 2rem;
+    /* padding: 5vh 0; */
+  }
+  #art .wrapper {
+    margin: 0;
+  }
+  #art .wrapper,
+  #art .wrapper::after,
+  #art .headerWrapper,
+  #art .imageWrapper,
+  #art img {
+    width: 70vw;
+  }
+  #art .headerWrapper h1,
+  #art .headerWrapper span {
+    font-size: 7rem;
+  }
+  #art .textWrapper {
+    width: 50vw;
+  }
+  #art .textWrapper p {
+    font-size: 5rem;
+    white-space: wrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #art .headerWrapper h1,
+  #art .headerWrapper span {
+    font-size: 5rem;
+  }
 }

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo";
-import MenuData from "../assets/MenuData";
-import "../css/Footer.css";
+import Logo from "../../assets/Logo";
+import MenuData from "../../assets/MenuData";
+import "./Footer.css";
 
 const Footer = () => {
   return (

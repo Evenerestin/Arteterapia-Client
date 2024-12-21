@@ -81,7 +81,8 @@
 
 #home header h3 {
   letter-spacing: 10px;
-  line-height: 5rem;
+  margin-top: 1rem;
+  line-height: 3rem;
   font-size: 1.5rem;
   color: white;
   text-indent: 10vw;
@@ -97,5 +98,41 @@
   }
   100% {
     clip-path: inset(0 0 0 0);
+  }
+}
+
+/* --------------------------- media queries --------------------------- */
+
+@media screen and (max-width: 1023px) {
+  #home header ul {
+    font-size: 3rem;
+  }
+  #home header h3 {
+    font-size: 1rem;
+    text-indent: 0;
+    margin-left: 3rem;
+    line-height: 2rem;
+    letter-spacing: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #home {
+    min-height: 50rem;
+  }
+  #home header .siteTitle {
+    left: clamp(2rem, 15vw, 20rem);
+    top: 10rem;
+    overflow: visible;
+    display: flex;
+  }
+  #home header ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 2rem;
+  }
+  #home header h3 {
+    margin: 1rem 2rem 1rem 1.5rem;
+    margin: 15vh 2rem 1rem 1.5rem;
   }
 }

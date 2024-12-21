@@ -32,15 +32,6 @@
   width: 60vw;
 }
 
-/* #about header::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  width: 100%;
-  height: 60vh;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgb(23, 23, 24));
-  } */
-
 #about header a {
   position: absolute;
   width: 7rem;
@@ -122,25 +113,21 @@
 }
 
 #about h2 {
-  width: 60%;
-  width: 70%;
   width: 85%;
   margin-left: auto;
   margin-right: 2rem;
   text-align: end;
   font-size: 2.5rem;
-  color: rgb(140, 182, 189);
-  color: rgb(53, 100, 122);
   color: rgb(125, 175, 184);
 }
 
 /* --------------------------- content ---------------------------  */
 
 #about .content {
+  padding: 1rem 0;
   width: 100%;
   color: rgb(209, 209, 209);
   justify-content: space-evenly;
-  /* padding-bottom: 2rem; */
 }
 
 #about .content::after {
@@ -153,8 +140,6 @@
   background-image: url(/aboutMeAsset.png);
   background-repeat: no-repeat;
   background-position: top right;
-  opacity: 0.15;
-  opacity: 0.25;
   opacity: 0.2;
 }
 
@@ -175,12 +160,83 @@
 }
 
 #about .biography .content #signature {
-  z-index: 10;
   transform: scale(0.8);
   margin-left: calc(100% - 450px);
   margin-top: 2rem;
-  /* margin: 0; */
-  fill: rgb(183, 236, 234);
-  fill: white;
   fill: rgb(125, 175, 184);
+}
+
+@media screen and (max-width: 1350px) {
+  #about header h1 {
+    top: 20svh;
+  }
+  #about .overlay {
+    height: 40vh;
+  }
+  #about .biography {
+    height: auto;
+  }
+  #about h2 {
+    font-size: 2rem;
+  }
+  #about .content {
+    padding: 4rem 0;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  #about header {
+    height: 80svh;
+  }
+  #about .overlay {
+    height: 30vh;
+  }
+  #about header h1 {
+    font-size: 4rem;
+  }
+  #about h2 {
+    font-size: 1.5rem;
+  }
+  #about .content h3 {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about header h1 {
+    font-size: 3rem;
+    left: clamp(3rem, 5vw, 10rem);
+    text-shadow: 0 0 2px black;
+  }
+  #about .biography h2 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  #about .content {
+    align-items: center;
+    width: 80%;
+    /* padding: 4rem clamp(2rem, 5vw, 5rem); */
+  }
+  #about .content img {
+    height: 35vh;
+    float: left;
+    width: auto;
+    border-radius: 0.5rem;
+    margin: 2rem 3rem 2rem 0;
+  }
+  #about .biography .content #signature {
+    margin: 1rem auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  #about header h1 {
+    top: 25vh;
+    font-size: 2.5rem;
+    left: clamp(3rem, 5vw, 10rem);
+  }
+  #about .content img {
+    margin: 0.5rem 2rem 0.5rem 0;
+  }
+  #about .biography .content #signature {
+    transform: scale(0.6) translateX(-20%);
+  }
 }

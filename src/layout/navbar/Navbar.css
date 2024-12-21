@@ -51,6 +51,18 @@ nav.homePath .navLogo #logo {
 
 /* --------------------------- media queries --------------------------- */
 
+@media screen and (max-width: 1300px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+  nav.scrolled {
+    padding: 0.2rem 2rem;
+  }
+  nav.homePath {
+    padding: 1.5rem 3rem;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   nav {
     padding: 1rem 1.5rem;
