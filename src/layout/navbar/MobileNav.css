@@ -91,7 +91,7 @@ nav#mobile .navigation::after {
   width: 100%;
   transform: skew(-25deg) translate(5%, 0) rotate(90deg);
   background: rgb(162 131 97);
-  background: url(/kier-in-sight-archives-shLU6SZfIQY-unsplash2.jpg);
+  background: url(/mobileNavbar.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -109,15 +109,12 @@ nav#mobile .menuItems {
   padding: 2rem 0 3rem;
   margin: auto auto auto clamp(2rem, 10vw, 10rem);
   gap: 1.5rem;
-  transform: translateY(-100vh);
-  /* opacity: 0; */
-  /* transition: transform 1s cubic-bezier(0,.87,.54,.92), opacity 1s ease-in; */
-  transition: all 1s cubic-bezier(0, 0.87, 0.54, 0.92) 0.2s;
+  transform: translate(-100vw, -5vh);
+  transition: transform 0.3s cubic-bezier(0, 0.87, 0.54, 0.92) 0.2s;
 }
 
 nav#mobile.open .menuItems {
-  /* opacity: 1; */
-  transform: translateY(0);
+  transform: translate(0, -5vh);
 }
 
 nav#mobile .menuItems .menuItem a {
