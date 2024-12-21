@@ -9,7 +9,6 @@ const Shop = () => {
 
   useGSAP(() => {
     fadeFromBottom("header");
-    // fadeFromBottom(".heading");
     fadeFromSides(".objectContainer", ".photo", ".info");
   });
 
@@ -55,7 +54,6 @@ const Shop = () => {
               <div key={object.id} className="objectContainer flex">
                 <img className="photo" src={object.src} alt={object.title} />
                 <div className="info">
-                  {/* <h1>&#10077;{object.title}&#10078;</h1> */}
                   <h1>
                     <span>&#10077;</span>
                     {object.title}

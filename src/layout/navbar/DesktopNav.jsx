@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 import { InstagramIcon } from "../../assets/ContactIcons";
 import Logo from "../../assets/Logo";
-import MenuData from "../../assets/MenuData";
+import menuData from "../../assets/menuData";
 import "./DesktopNav.css";
 
 const DesktopNav = ({ isScrolled, isHomePage }) => {
@@ -18,7 +18,7 @@ const DesktopNav = ({ isScrolled, isHomePage }) => {
       </Link>
       <div className="navigation flex">
         <ul className="flex menuItems">
-          {MenuData.map((menuItem, index) => {
+          {menuData.map((menuItem, index) => {
             return (
               <li className="menuItem" key={index}>
                 {menuItem.submenu ? (

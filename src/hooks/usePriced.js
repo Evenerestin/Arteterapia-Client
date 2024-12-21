@@ -1,12 +1,12 @@
 import { useMemo } from "react";
-import mockData from "../assets/mockData";
-import { ArtCategories } from "../config";
+import galleryData from "../assets/galleryData";
+import { artCategories } from "../config";
 
 const usePriced = () => {
   const availableItems = useMemo(() => {
-    return mockData
+    return galleryData
       .map((category) => {
-        const categoryData = ArtCategories.find(
+        const categoryData = artCategories.find(
           (item) => item.category === category.category
         );
         const label = categoryData ? categoryData.label : "Unknown Category";

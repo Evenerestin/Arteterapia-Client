@@ -6,17 +6,12 @@ import "../css/Didactics.css";
 const Didactics = () => {
   useGSAP(() => {
     fadeFromSides(".content", ".heading", "video");
-    // fadeFromRight(".videoAsset");
-    // fadeFromBottom(".text");
     fadeFromBottom(".slider");
   });
 
   return (
     <div id="didactics">
       <header>
-        {/* <div className="backgroundNoise">
-          <div className="grain"></div>
-        </div> */}
         <video autoPlay muted loop>
           <source src="/didacticsHeaderClipped.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -33,7 +28,6 @@ const Didactics = () => {
             <source src="/didacticsAssetClipped.mp4" type="video/mp4" />
           </video>
         </div>
-        {/* <div className="text flexColumn"> */}
         <div className="text">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias

@@ -1,4 +1,4 @@
-export const ArtCategories = [
+export const artCategories = [
   {
     path: "malarstwo",
     category: "painting",

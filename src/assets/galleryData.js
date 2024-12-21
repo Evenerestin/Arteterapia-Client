@@ -1,4 +1,4 @@
-const mockData = [
+const galleryData = [
   {
     category: "painting",
     children: [
@@ -287,4 +287,4 @@ const mockData = [
   },
 ];
 
-export default mockData;
+export default galleryData;

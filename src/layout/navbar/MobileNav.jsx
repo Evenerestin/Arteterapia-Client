@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { InstagramIcon } from "../../assets/ContactIcons";
 import Logo from "../../assets/Logo";
-import MenuData from "../../assets/MenuData";
+import menuData from "../../assets/menuData";
 import "./MobileNav.css";
 
 const MobileNav = ({ isScrolled, isHomePage }) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(
-    MenuData.map(() => false)
+    menuData.map(() => false)
   );
   const toggleMobileMenu = () => {
     setIsMobileOpen((prev) => !prev);
@@ -28,7 +28,7 @@ const MobileNav = ({ isScrolled, isHomePage }) => {
   };
 
   const closeDropdownMenu = () => {
-    setIsDropdownOpen(MenuData.map(() => false));
+    setIsDropdownOpen(menuData.map(() => false));
   };
 
   return (
@@ -50,7 +50,7 @@ const MobileNav = ({ isScrolled, isHomePage }) => {
       </div>
       <div className="navigation flex">
         <ul className="flexColumn menuItems">
-          {MenuData.map((menuItem, index) => (
+          {menuData.map((menuItem, index) => (
             <li className="menuItem" key={index}>
               {menuItem.submenu ? (
                 <div className="flexColumn">

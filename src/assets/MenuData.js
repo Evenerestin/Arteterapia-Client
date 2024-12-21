@@ -1,20 +1,10 @@
-import { ArtCategories } from "../config";
+import { artCategories } from "../config";
 
-const MenuData = [
+const menuData = [
   {
     label: "Twórczość",
     path: "/tworczosc",
-    // submenu: [
-    //   ...ArtCategories.map((item) => ({
-    //     path: item.path,
-    //     label: item.label,
-    //   })),
-    //   {
-    //     path: "zamowienia",
-    //     label: "Zamówienia",
-    //   },
-    // ],
-    submenu: ArtCategories.map((item) => ({
+    submenu: artCategories.map((item) => ({
       path: item.path,
       label: item.label,
     })),
@@ -37,4 +27,4 @@ const MenuData = [
   },
 ];
 
-export default MenuData;
+export default menuData;

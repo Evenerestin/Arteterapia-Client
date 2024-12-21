@@ -16,34 +16,6 @@ const Navbar = () => {
   ) : (
     <DesktopNav isScrolled={isScrolled} isHomePage={isHomePage} />
   );
-  // return (
-  //   <nav
-  //     className={`flex ${isHomePage ? "homePath" : ""} ${
-  //       isScrolled || isPanelPage ? "scrolled" : ""
-  //     }`}
-  //   >
-  //     <Link to="/" className="navLogo">
-  //       <Logo />
-  //     </Link>
-  //     <div className="navigation flex">
-  //       <ul className="flex menuItems">
-  //         {MenuData.map((item, index) => {
-  //           return <MenuItem menuItem={item} key={index} />;
-  //         })}
-  //       </ul>
-  //       <div className="socialIcons flex">
-  //         <a
-  //           href="https://www.instagram.com/arteterapia.akw/"
-  //           target="_blank"
-  //           rel="noopener noreferrer"
-  //           className="gridCenter instagram"
-  //         >
-  //           <InstagramIcon />
-  //         </a>
-  //       </div>
-  //     </div>
-  //   </nav>
-  // );
 };
 
 export default Navbar;

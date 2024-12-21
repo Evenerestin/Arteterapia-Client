@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root";
-import { ArtCategories } from "./config";
+import { artCategories } from "./config";
 import "./index.css";
 import About from "./pages/About";
 import Art from "./pages/Art";
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "tworczosc",
         element: <Art />,
-        children: ArtCategories.map((item) => ({
+        children: artCategories.map((item) => ({
           path: item.path,
           element: <Gallery category={item.category} />, // Passing propsValue as prop
         })),
