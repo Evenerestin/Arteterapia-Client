@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element: <Art />,
         children: artCategories.map((item) => ({
           path: item.path,
-          element: <Gallery category={item.category} />, // Passing propsValue as prop
+          element: <Gallery category={item.category} />,
         })),
       },
       {

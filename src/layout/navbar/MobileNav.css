@@ -73,7 +73,6 @@ nav#mobile .navigation {
   background: rgba(255, 255, 255, 0.85);
   background: rgba(4, 25, 34, 0.8);
   background: rgba(0, 0, 0, 0.9);
-  /* backdrop-filter: blur(1px); */
   transition: opacity 0.5s ease;
 }
 
@@ -133,11 +132,8 @@ nav#mobile .menuItems .menuItem button {
   font-weight: 700;
   letter-spacing: 7px;
   text-transform: uppercase;
-  color: black;
-  color: rgb(21, 45, 54);
   color: white;
   align-items: center;
-  text-shadow: 0 0 3px black;
   text-shadow: 0 0 1px rgb(21, 45, 54);
 }
 
@@ -174,4 +170,10 @@ nav#mobile .navigation .dropdownMenu .dropdownItem button {
   padding: 0.5rem 1rem;
   font-size: 1.3rem;
   margin-left: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav#mobile .menuItems .menuItem button {
+    font-size: 1.3rem;
+  }
 }

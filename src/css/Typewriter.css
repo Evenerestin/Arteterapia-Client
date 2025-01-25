@@ -5,17 +5,11 @@ ul {
   color: white;
 }
 
-/* ul li {
-  font-family: "Montserrat", sans-serif;
-} */
-
 .shown {
-  /* opacity: 1; */
   display: inline;
 }
 
 .hidden {
-  /* opacity: 0; */
   display: none;
 }
 

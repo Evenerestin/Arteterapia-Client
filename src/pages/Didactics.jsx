@@ -19,14 +19,22 @@ const Didactics = () => {
       </header>
       <div className="content">
         <h1>Twórcze zajęcia dla każdego.</h1>
-        <div className="heading flex">
+        <div className="heading flexColumn">
           <h2>
             Rozwijaj wyobraźnię i umiejętności artystyczne na warsztatach
             plastycznych, które pobudzają kreatywność i inspirują do działania.
           </h2>
-          <video muted controls>
-            <source src="/didacticsAssetClipped.mp4" type="video/mp4" />
-          </video>
+          <div className="video flexColumn">
+            <video autoPlay muted loop>
+              <source src="/didacticsAssetClipped1.mp4" type="video/mp4" />
+            </video>
+            <video autoPlay muted loop>
+              <source src="/didacticsAssetClipped2.mp4" type="video/mp4" />
+            </video>
+            <video autoPlay muted loop>
+              <source src="/didacticsAssetClipped3.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
         <div className="text">
           <p>

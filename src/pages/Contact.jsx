@@ -31,7 +31,7 @@ const Contact = () => {
       <div className="contactInformations flexColumn">
         <div className="flex">
           <MailIcon />
-          <p>someone@example.com</p>
+          <p>agnieszka.kornas-wisniewska@wp.pl</p>
         </div>
         <div className="flex">
           <InstagramIcon />
@@ -42,7 +42,7 @@ const Contact = () => {
         <div className="contactMobile flexColumn">
           <div className="flex">
             <MailIcon />
-            <p>someone@example.com</p>
+            <p>agnieszka.kornas-wisniewska@wp.pl</p>
           </div>
           <div className="flex">
             <InstagramIcon />

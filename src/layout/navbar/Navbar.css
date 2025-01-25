@@ -10,7 +10,6 @@ nav {
   left: 0;
   z-index: 10;
   transition: padding 0.5s ease;
-  /* box-shadow: 0 0 15px 1px rgb(0, 0, 0, 0.1); */
 }
 
 nav.scrolled {
@@ -20,7 +19,6 @@ nav.scrolled {
 
 nav.homePath {
   padding: 1.5rem 6rem;
-  /* box-shadow: none; */
 }
 
 /* --------------------------- logo --------------------------- */
@@ -29,8 +27,6 @@ nav .navLogo {
   position: relative;
   background: none;
   border: none;
-  /* height: 5rem; */
-  /* width: auto; */
 }
 
 nav .navLogo #logo {
@@ -45,8 +41,6 @@ nav .navLogo #logo {
 nav.homePath .navLogo #logo {
   height: 3.5rem;
   height: 3rem;
-  /* fill: rgb(5, 75, 103); */
-  /* fill: grey; */
 }
 
 /* --------------------------- media queries --------------------------- */
@@ -72,5 +66,17 @@ nav.homePath .navLogo #logo {
   }
   nav.homePath {
     padding: 1.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav .navLogo #logo {
+    height: 2.5rem;
+    height: 2rem;
+    margin-top: 0.2rem;
+  }
+  nav.homePath .navLogo #logo {
+    height: 2.5rem;
+    height: 2rem;
   }
 }

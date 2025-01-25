@@ -1,11 +1,32 @@
 import { useGSAP } from "@gsap/react";
+import { useMemo } from "react";
+import galleryData from "../assets/galleryData";
 import { fadeFromBottom, fadeFromSides } from "../components/revealAnimations";
 import ShopHeading from "../components/ShopHeading";
+import { artCategories } from "../config";
 import "../css/Shop.css";
-import usePriced from "../hooks/usePriced";
 
 const Shop = () => {
-  const availableItems = usePriced();
+  const availableItems = useMemo(() => {
+    return galleryData
+      .map((category) => {
+        const categoryData = artCategories.find(
+          (item) => item.category === category.category
+        );
+        const label = categoryData ? categoryData.label : "Unknown Category";
+        const pricedItems = category.children.filter(
+          (object) => object?.price || object?.price === 0
+        );
+        if (pricedItems.length > 0) {
+          return {
+            label,
+            pricedItems,
+          };
+        }
+        return null;
+      })
+      .filter(Boolean);
+  }, []);
 
   useGSAP(() => {
     fadeFromBottom("header");
@@ -55,25 +76,37 @@ const Shop = () => {
             key={index}
             className="categoryContainer flexColumn"
           >
-            {category.pricedItems.map((object) => (
-              <div key={object.id} className="objectContainer flex">
-                <img className="photo" src={object.src} alt={object.title} />
-                <div className="info">
-                  <h1>
-                    <span>&#10077;</span>
-                    {object.title}
-                    <span>&#10078;</span>
-                  </h1>
-                  <p>{object.method}</p>
-                  {object.sizeX && object.sizeY && (
-                    <p>
-                      {object.sizeX} × {object.sizeY}
-                    </p>
-                  )}
-                  <p>Price: {object.price}</p>
+            {category.pricedItems.map((object) =>
+              object.price !== undefined && object.price !== null ? (
+                <div
+                  key={object.id}
+                  className={`objectContainer ${
+                    object.price === 0 ? `sold` : ``
+                  } flex`}
+                >
+                  {object.price === 0 && <h1 className="sold">Sprzedane</h1>}
+                  <img
+                    className="photo"
+                    loading="lazy"
+                    src={object.src}
+                    alt={object.title}
+                  />
+                  <div className="info">
+                    <h1 className="flex">
+                      <span>&#10077;</span>
+                      {object.title}
+                      <span>&#10078;</span>
+                    </h1>
+                    <p>Metoda: {object?.method}</p>
+                    {object.sizeX && object.sizeY && (
+                      <p>
+                        {object.sizeX} × {object.sizeY}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ) : null
+            )}
           </div>
         ))}
       </div>

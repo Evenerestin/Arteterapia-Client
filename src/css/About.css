@@ -83,9 +83,6 @@
     bottom: -10rem;
     opacity: 0;
   }
-  /* 100% {
-    bottom: 1rem;
-  } */
 }
 
 /* --------------------------- biographyHook ---------------------------  */
@@ -109,7 +106,6 @@
   overflow: hidden;
   padding-top: 3rem;
   padding-bottom: 5svh;
-  /* margin-bottom: 4rem; */
 }
 
 #about h2 {
@@ -147,6 +143,8 @@
   height: 55vh;
   width: auto;
   border-radius: 0.5rem;
+  position: sticky;
+  z-index: 10;
 }
 
 #about .biography .content > div {
@@ -214,7 +212,6 @@
   #about .content {
     align-items: center;
     width: 80%;
-    /* padding: 4rem clamp(2rem, 5vw, 5rem); */
   }
   #about .content img {
     height: 35vh;
