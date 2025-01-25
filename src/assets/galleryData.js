@@ -514,13 +514,13 @@ const galleryData = [
       {
         id: "11",
         src: "/ceramic/ceramic11.jpg",
-        title: "",
+        title: "Ikebana",
         method: "",
       },
       {
         id: "12",
         src: "/ceramic/ceramic12.jpg",
-        title: "",
+        title: "Owoc Ewy",
         method: "",
       },
     ],
