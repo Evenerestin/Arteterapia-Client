@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Sitemap: https://www.arteterapia-akw.pl/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
