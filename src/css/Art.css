@@ -195,6 +195,24 @@
 @media screen and (max-width: 576px) {
   #art .headerWrapper h1,
   #art .headerWrapper span {
-    font-size: 5rem;
+    font-size: 3.5rem;
+  }
+  #art .textWrapper p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  #art .textWrapper p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-height: 567px) {
+  #art .headerWrapper h1,
+  #art .headerWrapper span {
+    font-size: 3.5rem;
+  }
+  #art .textWrapper p {
+    font-size: 1.5rem;
   }
 }
