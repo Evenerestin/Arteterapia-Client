@@ -13,7 +13,7 @@
 <p>React.js, Vite, CSS Modules, React Router, GSAP, Swiper<br /></p>
 
 <h3>Deployment:</h3>
-<p>Netlify<br /></p>
+<p>Vercel<br /></p>
 
 <br />
 
@@ -23,4 +23,5 @@
   Built with a focus on performance, accessibility, and responsive design, it provides an immersive experience for both art enthusiasts and potential clients.<br />
 </p>
 
-<img src="https://github.com/user-attachments/assets/b68d181d-303a-40c7-812f-c0ba7339812d" width="800px" height="auto"/>
+<img src="https://github.com/user-attachments/assets/efba65d6-2397-489e-92a8-2e024c66a692" />
+"width="800px" height="auto"/>
