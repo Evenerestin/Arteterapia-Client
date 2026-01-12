@@ -10,7 +10,7 @@
 <br />
 
 <h3>Technology Stack:</h3>
-<p>React.js, Vite, CSS Modules, React Router, GSAP, Swiper<br /></p>
+<p>React, Vite, CSS Modules, React Router, GSAP, Swiper<br /></p>
 
 <h3>Deployment:</h3>
 <p>Vercel<br /></p>
