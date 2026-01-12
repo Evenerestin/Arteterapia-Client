@@ -24,4 +24,3 @@
 </p>
 
 <img src="https://github.com/user-attachments/assets/efba65d6-2397-489e-92a8-2e024c66a692" />
-"width="800px" height="auto"/>
