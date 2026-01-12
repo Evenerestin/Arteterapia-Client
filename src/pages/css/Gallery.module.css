@@ -31,7 +31,7 @@ html {
   grid-auto-rows: 100svh;
   grid-auto-rows: calc(100svh - 4rem);
   place-content: space-around;
-  margin-top: 2rem;
+  margin: 5rem 0;
   align-items: center;
   padding: 5rem clamp(2rem, 4vw, 4rem);
 }
