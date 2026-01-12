@@ -6,56 +6,62 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.arteterapia-akw.pl/</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
-  <changefreq>never</changefreq>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>1.0</priority>
 </url>
 <url>
   <loc>https://www.arteterapia-akw.pl/tworczosc</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.5</priority>
 </url>
 <url>
   <loc>https://www.arteterapia-akw.pl/tworczosc/malarstwo</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>1.0</priority>
 </url>
 <url>
   <loc>https://www.arteterapia-akw.pl/tworczosc/rzezba</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.arteterapia-akw.pl/tworczosc/ceramika</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.arteterapia-akw.pl/zamowienia</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.arteterapia-akw.pl/dydaktyka</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.5</priority>
 </url>
 <url>
   <loc>https://www.arteterapia-akw.pl/o-mnie</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
-  <changefreq>never</changefreq>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>0.5</priority>
 </url>
 <url>
   <loc>https://www.arteterapia-akw.pl/kontakt</loc>
-  <lastmod>2025-01-25T12:25:14+00:00</lastmod>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://www.arteterapia-akw.pl/atrybucje</loc>
+  <lastmod>2026-01-12T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.2</priority>
 </url>
 </urlset>

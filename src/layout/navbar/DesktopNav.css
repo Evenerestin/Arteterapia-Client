@@ -1,178 +1,134 @@
-/* --------------------------- navigation --------------------------- */
-
-nav#desktop .navigation {
+nav#desktop {
   align-items: center;
 }
 
-/* ------------- items -------------- */
-
-nav#desktop .navigation .menuItems {
-  gap: 1rem;
-  gap: 0;
-  justify-content: space-evenly;
-  margin-right: 4rem;
-}
-
-/* ------------- icons -------------- */
-
-nav#desktop .navigation .socialIcons {
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0 1rem 0 2rem;
-}
-
-nav#desktop .navigation .socialIcons #instagramIcon {
-  width: 20px;
-  height: 20px;
-  transition: fill 0.5s cubic-bezier(0.18, 0, 0.21, 0.21);
-}
-nav#desktop .navigation .socialIcons #gokIcon {
-  width: 32px;
-  height: 32px;
-  transition: fill 1s;
-}
-
-nav#desktop .navigation .socialIcons a:hover #instagramIcon,
-nav#desktop .navigation .socialIcons a:hover #gokIcon {
-  fill: rgb(5, 75, 103);
-  fill: white;
-  fill: rgb(177, 177, 177);
-  z-index: 10;
-}
-
-nav#desktop .navigation .socialIcons a {
-  position: relative;
-  padding: 2px;
-  border-radius: 10rem;
-  transition: transform 0.5s ease-in;
-}
-
-/* --------------------------- menuItem --------------------------- */
-
-nav#desktop .menuItem {
-  position: relative;
-}
-
-nav#desktop .menuItem a {
-  border-radius: 0;
-  text-decoration: none;
-  font-size: 1rem;
-  font-size: 0.8rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  background-color: white;
+nav#desktop .navLogo button {
+  padding: 0;
   border: none;
-  padding: 1rem 1.5rem;
-  width: 100%;
-  transition: color 0.3s ease;
+  background: none;
+}
+
+nav#desktop .navLogo button svg {
+  fill: var(--dark);
+  transition: fill 0.4s ease;
+}
+
+nav#desktop .navLogo button:hover svg {
+  fill: var(--accent-secondary);
+}
+
+nav#desktop .menuItems {
+  align-items: center;
+}
+
+nav#desktop .menuItems button {
+  position: relative;
+  padding: 1rem clamp(0.5rem, 1vw, 1.5rem);
+  background: none;
+  border: none;
   white-space: nowrap;
+  word-break: keep-all;
+  color: var(--dark);
   font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
   font-weight: 400;
-  color: black;
-  display: inline-block;
+
+  transition: color 0.6s ease;
 }
 
-nav#desktop .menuItem a:hover {
-  color: rgb(177, 177, 177);
+nav#desktop .menuItems button:hover {
+  color: var(--accent-secondary);
 }
 
-nav#desktop .menuItem a.active {
-  color: rgb(58, 155, 190);
-  font-weight: 600;
-}
-
-nav#desktop .menuItem a.active:hover {
-  color: rgb(58, 155, 190);
-}
-
-nav#desktop .menuItem > a::after,
-nav#desktop .menuItem > div > a::after {
+nav#desktop .menuItem button::after {
   position: absolute;
   content: "";
   bottom: 0.2rem;
   left: 0;
-  background-color: rgb(177, 177, 177);
+  background-color: var(--dark);
   height: 1px;
   width: 0;
   transition: width 1s ease, background-color 0.6s ease;
 }
 
-nav#desktop .menuItem a:hover::after {
+nav#desktop .menuItem button:hover::after {
   width: 100%;
+  background-color: var(--accent-secondary);
 }
 
-nav#desktop .menuItem a.active:hover::after {
-  background-color: rgb(58, 155, 190);
+nav#desktop .menuItem .active button {
+  color: var(--accent-primary);
+
+  font-weight: 600;
 }
 
-/* --------------------------- dropdownItem --------------------------- */
+nav#desktop .menuItem .active button:hover {
+  color: var(--accent-primary-light);
+}
 
-nav#desktop .menuItem .dropdownMenu {
-  width: 140%;
+nav#desktop .menuItem .active button::after {
+  background-color: var(--accent-primary);
+}
+
+nav#desktop .menuItem .active button:hover::after {
+  background-color: var(--accent-primary-light);
+}
+
+nav#desktop .socialIcons {
+  justify-content: center;
+  align-items: center;
+}
+
+nav#desktop .socialIcons button {
+  background: none;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: black;
+  transition: color 0.4s ease;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+nav#desktop .socialIcons button svg {
+  transition: color 0.4s ease;
+}
+
+nav#desktop .socialIcons button:hover svg {
+  color: var(--accent-secondary);
+}
+
+nav#desktop .menuItem {
+  position: relative;
+}
+
+nav#desktop .dropdownMenu {
   position: absolute;
-  overflow: hidden;
-  top: 100%;
-  left: -20%;
-  height: 0;
-  z-index: 10;
-  transition: height 0.5s ease-in-out;
-  border-radius: 0.2rem;
+  background: white;
+  text-align: start;
+  opacity: 0;
+  display: none;
+  min-width: 100%;
+  padding: 1rem 2rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-nav#desktop .dropdownMenu a.dropdownItem:first-of-type {
-  padding-top: 2rem;
-}
-
-nav#desktop .dropdownMenu a.dropdownItem:last-of-type {
-  padding-bottom: 2rem;
-}
-
-nav#desktop .menuItem:hover .dropdownMenu {
-  height: max-content;
-}
-
-nav#desktop .dropdownMenu a.dropdownItem {
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: black;
-  padding: 1rem 1.5rem;
+nav#desktop .menuItem:hover .dropdownMenu,
+nav#desktop .dropdownMenu.open {
+  opacity: 1;
   display: block;
-  transition: color 0.3s ease;
+  height: auto;
+  z-index: 10;
+}
+
+nav#desktop .dropdownItem button {
+  padding: 1rem 0.5rem;
+  background: none;
+  border: none;
   white-space: nowrap;
-  font-family: "Raleway", sans-serif;
-}
-
-nav#desktop .dropdownMenu a.dropdownItem:hover {
-  color: rgb(177, 177, 177);
-}
-
-nav#desktop .menuItem a.active + .dropdownMenu a.dropdownItem:hover {
-  color: rgb(58, 155, 190);
-}
-
-/* --------------------------- menuItem & dropdownItem --------------------------- */
-
-nav#desktop .menuItem a,
-nav#desktop .dropdownItem a {
-  height: 100%;
-  cursor: pointer;
-}
-
-nav#desktop .menuItem:hover a.dropdownItem {
-  color: black;
-}
-
-nav#desktop .menuItem:hover a.dropdownItem:hover {
-  color: rgb(177, 177, 177);
-}
-
-/* --------------------------- media queries --------------------------- */
-
-@media screen and (max-width: 1300px) {
-  nav#desktop .navigation .menuItems {
-    margin-right: 0;
-  }
-  nav#desktop .menuItem a {
-    padding: 1rem 0.7rem;
-  }
+  word-break: keep-all;
+  width: 100%;
+  text-align: start;
 }

@@ -8,13 +8,18 @@ const Footer = () => {
     <footer className="flex">
       <div className="copyright flex">
         <Logo />
-        <p>©2024 Arteterapia</p>
+        <div className="flexColumn">
+          <p>©2024 Arteterapia</p>
+          <Link to="atrybucje">
+            <button>Atrybucje</button>
+          </Link>
+        </div>
       </div>
       <div className="footerNavigation flex">
         {menuData.map((menuItem, id) =>
           menuItem.submenu ? (
             menuItem.submenu.map((submenuItem, subId) => (
-              <Link key={subId} to={submenuItem.path}>
+              <Link key={subId} to={`${menuItem.path}/${submenuItem.path}`}>
                 <button>{submenuItem.label}</button>
               </Link>
             ))

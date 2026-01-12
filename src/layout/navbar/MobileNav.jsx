@@ -1,7 +1,11 @@
+import {
+  IconArrowForward,
+  IconArrowNarrowRight,
+  IconBrandInstagram,
+} from "@tabler/icons-react";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { InstagramIcon } from "../../assets/ContactIcons";
 import Logo from "../../assets/Logo";
 import { menuData } from "../../config";
 import "./MobileNav.css";
@@ -38,6 +42,17 @@ const MobileNav = ({ isScrolled, isHomePage }) => {
       } ${isMobileOpen ? `open` : ``} `}
       id="mobile"
     >
+      {isMobileOpen && (
+        <video
+          src="/videos/mobile-background.mp4"
+          autoPlay
+          muted
+          preload="none"
+          playsInline
+          className="backgroundVideo"
+          aria-hidden="true"
+        />
+      )}
       <Link to="/" className="navLogo">
         <Logo />
       </Link>
@@ -48,10 +63,20 @@ const MobileNav = ({ isScrolled, isHomePage }) => {
           <span></span>
         </button>
       </div>
-      <div className="navigation flex">
+      <div className="navigation flexColumn">
         <ul className="flexColumn menuItems">
+          <li aria-label="Strona główna">
+            <Link to="/" className="menuLogo" onClick={closeMobileMenu}>
+              <Logo />
+            </Link>
+          </li>
           {menuData.map((menuItem, index) => (
-            <li className="menuItem" key={index}>
+            <li
+              className="menuItem"
+              data-expandable
+              data-expanded={isDropdownOpen[index]}
+              key={index}
+            >
               {menuItem.submenu ? (
                 <div className="flexColumn">
                   <NavLink to={menuItem.path}>
@@ -65,8 +90,17 @@ const MobileNav = ({ isScrolled, isHomePage }) => {
                         }
                       }}
                       className={`flex ${isDropdownOpen[index] ? `open` : ``}`}
+                      aria-label={`Podmenu ${menuItem.label}`}
+                      aria-expanded={isDropdownOpen[index]}
                     >
-                      {menuItem.label} <span className="dropdownArrow"></span>
+                      <span className="flex">
+                        <IconArrowNarrowRight
+                          stroke={1}
+                          aria-hidden="true"
+                          className="dropdownIcon"
+                        />
+                        {menuItem.label}
+                      </span>
                     </button>
                   </NavLink>
                   <div
@@ -74,21 +108,25 @@ const MobileNav = ({ isScrolled, isHomePage }) => {
                       isDropdownOpen[index] ? "open" : ""
                     }`}
                   >
-                    {menuItem.submenu.map((submenuItem, index) => (
-                      <Link
-                        key={index}
-                        to={`${menuItem.path}/${submenuItem.path}`}
-                        className="dropdownItem"
-                      >
-                        <button
-                          onClick={() => {
-                            closeMobileMenu();
-                          }}
-                        >
-                          {submenuItem.label}
-                        </button>
-                      </Link>
-                    ))}
+                    <ul>
+                      {menuItem.submenu.map((submenuItem, index) => (
+                        <li key={index}>
+                          <Link
+                            to={`${menuItem.path}/${submenuItem.path}`}
+                            className="dropdownItem"
+                          >
+                            <button
+                              onClick={() => {
+                                closeMobileMenu();
+                              }}
+                              aria-label={submenuItem.label}
+                            >
+                              {submenuItem.label}
+                            </button>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ) : (
@@ -111,8 +149,13 @@ const MobileNav = ({ isScrolled, isHomePage }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="gridCenter instagram"
+            aria-label="Instagram"
           >
-            <InstagramIcon />
+            <span className="flex">
+              <IconBrandInstagram stroke={1.4} aria-hidden="true" />
+              Instagram
+              <IconArrowForward stroke={1.4} aria-hidden="true" />
+            </span>
           </a>
         </div>
       </div>

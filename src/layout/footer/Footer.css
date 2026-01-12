@@ -1,6 +1,7 @@
 footer {
   height: 10vh;
   width: 100%;
+  overflow-x: hidden;
   background-color: rgb(7, 7, 7);
   justify-content: space-evenly;
   align-items: center;
@@ -11,22 +12,26 @@ footer * {
 }
 
 footer .copyright {
-  align-items: center;
+  align-items: start;
+  justify-content: start;
 }
 
 footer .copyright #logo {
-  height: 5vh;
-  width: auto;
+  max-height: 5vh;
+  height: auto;
+  width: clamp(10rem, 15vw, 15rem);
   fill: rgb(110, 110, 110);
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 footer .copyright p {
+  padding: 0 0.8rem;
   font-size: 0.8rem;
   color: rgb(110, 110, 110);
 }
 
-footer .footerNavigation button {
+footer .footerNavigation button,
+footer .copyright button {
   color: rgb(110, 110, 110);
   background: transparent;
   border: none;
@@ -36,22 +41,13 @@ footer .footerNavigation button {
   transition: color 1s ease;
   font-size: 0.8rem;
   letter-spacing: 1px;
+  word-break: keep-all;
+  white-space: nowrap;
 }
 
-footer .footerNavigation button:hover {
+footer .footerNavigation button:hover,
+footer .copyright button:hover {
   color: white;
-}
-
-/* --------------------------- media queries --------------------------- */
-
-@media screen and (max-width: 1300px) {
-  footer .copyright {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  footer .copyright #logo {
-    margin: 0;
-  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -60,32 +56,27 @@ footer .footerNavigation button:hover {
     padding: 2rem 1rem;
     justify-content: space-between;
   }
+  footer .copyright {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
   footer .copyright #logo {
-    width: 40vw;
-    max-height: 15rem;
-    height: 20vh;
+    margin: 0;
   }
   footer .footerNavigation {
     flex-direction: column;
     text-align: end;
   }
   footer .footerNavigation button {
-    font-size: 1.1rem;
     letter-spacing: 3px;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   footer {
-    padding: 2rem 3rem;
-    flex-direction: column-reverse;
+    padding: 1rem 0.5rem;
   }
   footer .copyright #logo {
-    width: 100%;
-    max-height: 5rem;
-  }
-  footer .footerNavigation {
-    text-align: center;
-    margin-bottom: 2rem;
+    width: clamp(8rem, 12vw, 12rem);
   }
 }

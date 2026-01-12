@@ -6,6 +6,7 @@ import { artCategories } from "./config";
 import "./index.css";
 import About from "./pages/About";
 import Art from "./pages/Art";
+import Attributions from "./pages/Attributions";
 import Contact from "./pages/Contact";
 import Didactics from "./pages/Didactics";
 import Gallery from "./pages/Gallery";
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "kontakt",
         element: <Contact />,
+      },
+      {
+        path: "atrybucje",
+        element: <Attributions />,
       },
       {
         path: "*",

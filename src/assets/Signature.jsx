@@ -13,7 +13,6 @@ const Signature = () => {
       </metadata>
       <g
         transform="translate(0.000000,504.000000) scale(0.050000,-0.050000)"
-        stroke="none"
       >
         <path
           d="M1426 9748 c-72 -36 -214 -167 -198 -183 6 -5 39 19 73 53 63 63 215

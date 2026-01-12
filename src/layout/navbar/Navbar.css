@@ -21,8 +21,6 @@ nav.homePath {
   padding: 1.5rem 6rem;
 }
 
-/* --------------------------- logo --------------------------- */
-
 nav .navLogo {
   position: relative;
   background: none;
@@ -43,21 +41,7 @@ nav.homePath .navLogo #logo {
   height: 3rem;
 }
 
-/* --------------------------- media queries --------------------------- */
-
 @media screen and (max-width: 1300px) {
-  nav {
-    padding: 1rem 2rem;
-  }
-  nav.scrolled {
-    padding: 0.2rem 2rem;
-  }
-  nav.homePath {
-    padding: 1.5rem 3rem;
-  }
-}
-
-@media screen and (max-width: 1023px) {
   nav {
     padding: 1rem 1.5rem;
   }
@@ -71,12 +55,10 @@ nav.homePath .navLogo #logo {
 
 @media screen and (max-width: 768px) {
   nav .navLogo #logo {
-    height: 2.5rem;
     height: 2rem;
     margin-top: 0.2rem;
   }
   nav.homePath .navLogo #logo {
-    height: 2.5rem;
     height: 2rem;
   }
 }

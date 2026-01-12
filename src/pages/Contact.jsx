@@ -1,55 +1,69 @@
 import { useGSAP } from "@gsap/react";
-import { useMediaQuery } from "react-responsive";
-import { InstagramIcon, MailIcon } from "../assets/ContactIcons";
-import { fadeFromBottom, fadeFromRight } from "../components/revealAnimations";
-import "../css/Contact.css";
+import { IconBrandInstagram, IconMailFilled } from "@tabler/icons-react";
+import {
+  fadeFromBottom,
+  fadeFromRight,
+  fadeFromTop,
+} from "../components/revealAnimations";
+import styles from "./css/Contact.module.css";
 
 const Contact = () => {
-  const isMobile = useMediaQuery({ maxWidth: 576 });
   useGSAP(() => {
-    fadeFromBottom(".backgroundUpper");
-    fadeFromBottom(".backgroundLower");
-    fadeFromRight(".contactInformations");
+    fadeFromTop(".upper");
+    fadeFromBottom(".lower");
+    fadeFromRight(".heading");
   });
 
   return (
-    <div id="contact" className="flex">
-      <div>
-        <div className="backgroundUpper">
-          <img src="/contactBackground.jpg" alt="Zdjęcie obrazu ''" />
-          <div className="overlay"></div>
-        </div>
-        <div className="backgroundLower">
-          <img src="/contactBackground.jpg" alt="Zdjęcie obrazu ''" />
-          <div className="overlay"></div>
-        </div>
-        <div className="heading">
-          <h1>Kontakt</h1>
-          <h3>Serdecznie zapraszam...</h3>
-        </div>
-      </div>
-      <div className="contactInformations flexColumn">
-        <div className="flex">
-          <MailIcon />
-          <p>agnieszka.kornas-wisniewska@wp.pl</p>
-        </div>
-        <div className="flex">
-          <InstagramIcon />
-          <p>arteterapia.akw</p>
-        </div>
-      </div>
-      {isMobile ? (
-        <div className="contactMobile flexColumn">
-          <div className="flex">
-            <MailIcon />
-            <p>agnieszka.kornas-wisniewska@wp.pl</p>
+    <div id="contact" aria-label="Kontakt">
+      <header className={`${styles.header} flex`}>
+        <div className={`${styles.background} flex`}>
+          <div className={`${styles.container} ${styles.upper}`}>
+            <picture>
+              <source
+                srcSet="/images/contact/background.avif"
+                type="image/avif"
+              />
+              <source
+                srcSet="/images/contact/background.webp"
+                type="image/webp"
+              />
+              <img src="/images/contact/background.jpg" alt="Zdjęcie obrazu" />
+            </picture>
+            <div className={`${styles.overlay}`}></div>
           </div>
-          <div className="flex">
-            <InstagramIcon />
-            <p>arteterapia.akw</p>
+          <div className={`${styles.container} ${styles.lower}`}>
+            <picture>
+              <source
+                srcSet="/images/contact/background.avif"
+                type="image/avif"
+              />
+              <source
+                srcSet="/images/contact/background.webp"
+                type="image/webp"
+              />
+              <img src="/images/contact/background.jpg" alt="Zdjęcie obrazu" />
+            </picture>
+            <div className={`${styles.overlay}`}></div>
           </div>
         </div>
-      ) : null}
+        <div className={`${styles.content} flexColumn`}>
+          <div className={`${styles.heading}`}>
+            <h1>Kontakt</h1>
+            <h2>Serdecznie zapraszam...</h2>
+          </div>
+          <div className={`${styles.info} flexColumn`}>
+            <div className="flex">
+              <IconMailFilled size={25} />
+              <p>agnieszka.kornas-wisniewska@wp.pl</p>
+            </div>
+            <div className="flex">
+              <IconBrandInstagram size={25} />
+              <p>arteterapia.akw</p>
+            </div>
+          </div>
+        </div>
+      </header>
     </div>
   );
 };

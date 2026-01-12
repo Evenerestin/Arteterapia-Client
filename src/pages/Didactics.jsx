@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
-import ImageSlider from "../components/ImageSlider";
 import { fadeFromBottom, fadeFromSides } from "../components/revealAnimations";
-import "../css/Didactics.css";
+import ImageSlider from "../components/slider/Slider";
+import styles from "./css/Didactics.module.css";
 
 const Didactics = () => {
   useGSAP(() => {
@@ -10,37 +10,76 @@ const Didactics = () => {
   });
 
   return (
-    <div id="didactics">
-      <header>
-        <video autoPlay muted loop>
-          <source src="/didacticsHeaderClipped.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+    <div id="didactics" aria-label="Warsztaty plastyczne i zajęcia artystyczne">
+      <header className={styles.header}>
+        <video
+          autoPlay
+          muted
+          loop
+          aria-label="Klip wideo przedstawiający zajęcia plastyczne, kreatywność i atmosferę warsztatów artystycznych."
+        >
+          <source src="/videos/didacticsHeaderClipped.mp4" type="video/mp4" />
+          Twórczy klip wideo prezentujący atmosferę warsztatów plastycznych.
         </video>
       </header>
-      <div className="content">
+      <div className={styles.content}>
         <h1>Twórcze zajęcia dla każdego.</h1>
-        <div className="heading flexColumn">
+        <div className={`${styles.heading} flexColumn`}>
           <h2>
             Rozwijaj wyobraźnię i umiejętności artystyczne na warsztatach
             plastycznych, które pobudzają kreatywność i inspirują do działania.
           </h2>
-          <div className="video flexColumn">
-            <video autoPlay muted loop>
-              <source src="/didacticsAssetClipped1.mp4" type="video/mp4" />
+          <div
+            className={`${styles.video} flexColumn`}
+            aria-label="Galeria krótkich klipów z warsztatów plastycznych"
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              aria-describedby="didactics-video-1-desc"
+              aria-label="Klip wideo: Uczestnicy warsztatów malują na płótnie różnymi
+              technikami."
+            >
+              <source
+                src="/videos/didacticsAssetClipped1.mp4"
+                type="video/mp4"
+              />
+              Krótki klip wideo z warsztatów plastycznych.
             </video>
-            <video autoPlay muted loop>
-              <source src="/didacticsAssetClipped2.mp4" type="video/mp4" />
+            <video
+              autoPlay
+              muted
+              loop
+              aria-label="Klip wideo: Fragment zajęć ceramicznych, praca z gliną i
+              formowanie kształtów."
+            >
+              <source
+                src="/videos/didacticsAssetClipped2.mp4"
+                type="video/mp4"
+              />
+              Krótki klip wideo z warsztatów plastycznych.
             </video>
-            <video autoPlay muted loop>
-              <source src="/didacticsAssetClipped3.mp4" type="video/mp4" />
+            <video
+              autoPlay
+              muted
+              loop
+              aria-label="Klip wideo: Uczestnicy prezentują swoje gotowe prace i dzielą się
+              wrażeniami."
+            >
+              <source
+                src="/videos/didacticsAssetClipped3.mp4"
+                type="video/mp4"
+              />
+              Krótki klip wideo z warsztatów plastycznych.
             </video>
           </div>
         </div>
-        <div className="text">
+        <div className={styles.text}>
           <p>
             Od wielu lat dzielę się swoją pasją do sztuki, prowadząc warsztaty
             plastyczne dla każdej grupy wiekowej. Na swoje zajęcia zapraszam
-            zarówno dzieci,młodzież, jak i dorosłych.
+            zarówno dzieci, młodzież, jak i dorosłych.
           </p>
           <h3>
             Moim celem jest inspirowanie do odkrywania własnego potencjału
@@ -53,7 +92,7 @@ const Didactics = () => {
             sprzyjająca twórczości.
           </p>
         </div>
-        <div className="slider">
+        <div className={styles.slider} aria-label="Galeria zdjęć z warsztatów">
           <ImageSlider />
         </div>
       </div>

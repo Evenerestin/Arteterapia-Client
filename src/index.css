@@ -10,8 +10,14 @@
   font-weight: 500;
 }
 
+header {
+  min-height: 100svh;
+  height: auto;
+  width: 100%;
+  padding-top: 5rem;
+}
+
 h1 {
-  font-family: "IM Fell Great Primer", serif;
   font-family: "Poiret One", sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -29,15 +35,17 @@ h3 {
 }
 
 h2 {
-  font-size: 2rem;
-  letter-spacing: 3px;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
   color: rgb(125, 175, 184);
+  padding: 1rem 0;
 }
 
 h3 {
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
 }
 
 p {
@@ -46,6 +54,7 @@ p {
   font-weight: 500;
   font-size: 0.95rem;
   color: rgb(135, 135, 135);
+  padding: 0.5rem 0;
 }
 
 span {
@@ -57,10 +66,10 @@ span {
 }
 
 button {
-  font-family: "Moteserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: grey;
-  border-radius: 5rem;
-  border-radius: 0.5rem;
+  /* border-radius: 5rem; */
+  border-radius: 0.3rem;
   padding: 1rem 3rem;
   border: 1px solid rgb(189, 189, 189);
   cursor: pointer;
@@ -98,9 +107,38 @@ input {
   place-content: center;
 }
 
+.loadPreview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px);
+  transition: opacity 0.5s ease;
+  z-index: 5;
+}
+
 :root {
-  --accent-primary: ;
-  --accent-secondary: ;
+  --accent-primary: rgb(51, 108, 134);
+  --accent-primary-light: rgb(58, 155, 190);
+  --accent-secondary: rgb(177, 177, 177);
   --light: rgb(241, 241, 241);
   --dark: rgb(29, 29, 29);
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
 }

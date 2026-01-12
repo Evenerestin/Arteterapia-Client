@@ -4,24 +4,23 @@
 </h1>
 <h3>
   Business Website <br />
-  <a href="https://arteterapia.netlify.app">Arteterapia</a> <br />
+  <a href="https://www.arteterapia-akw.pl">Arteterapia - Agnieszka Kornas-Wiśniewska</a> <br />
 </h3>
 
 <br />
 
 <h3>Technology Stack:</h3>
-<p>
-  Frontend Stack: React.js, Vite <br />
-</p>
+<p>React.js, Vite, CSS Modules, React Router, GSAP, Swiper<br /></p>
+
+<h3>Deployment:</h3>
+<p>Netlify<br /></p>
 
 <br />
 
 <p>
-  Business website for an individual client, <br />
-  designed to showcase clients art portfolio as well as their teaching experience. <br />
-</p>
-<p>
-   Site features an admin panel allowing client to manage content. <br />
+  Arteterapia is a modern, visually engaging web application designed for an artist to professionally showcase their portfolio and teaching experience. <br />
+  The site features interactive galleries, detailed information about the artist’s background and didactic work.<br />
+  Built with a focus on performance, accessibility, and responsive design, it provides an immersive experience for both art enthusiasts and potential clients.<br />
 </p>
 
 <img src="https://github.com/user-attachments/assets/b68d181d-303a-40c7-812f-c0ba7339812d" width="800px" height="auto"/>

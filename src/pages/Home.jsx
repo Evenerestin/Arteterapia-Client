@@ -1,44 +1,34 @@
-import { useState } from "react";
-import Typewriter from "../components/Typewriter";
-import "../css/Home.css";
+import Typewriter from "../components/typewriter/Typewriter";
+import styles from "./css/Home.module.css";
 
 const Home = () => {
-  const [loaded, setLoaded] = useState(false);
-  const handleLoaded = () => {
-    setLoaded(true);
-  };
   return (
-    <div id="home">
-      <header>
-        <picture>
+    <div id="home" aria-label="Strona główna">
+      <header className={styles.header}>
+        <picture loading="eager" decoding="async">
           <source
-            srcSet="/homeBackgroundLowRes.webp"
+            type="image/avif"
+            srcSet="
+              /images/home-background.avif"
+          />
+          <source
             type="image/webp"
-            className={`background placeholder ${loaded ? "hidden" : ""}`}
+            srcSet="
+              /images/home-background.webp"
           />
           <img
-            src="/homeBackgroundLowRes.jpg"
-            alt="Tło"
-            className={`background placeholder ${loaded ? "hidden" : ""}`}
+            src="/images/home-background.jpg"
+            className={styles.background}
+            aria-hidden="true"
           />
         </picture>
-        <picture>
-          <source
-            srcSet="/homeBackgroundHighRes.webp"
-            type="image/webp"
-            className={`background ${loaded ? "" : "hidden"}`}
-            onLoad={handleLoaded}
+        <div className={styles.siteTitle}>
+          <Typewriter
+            class={styles.typewriter}
+            word="Arteterapia"
+            delay={5000}
           />
-          <img
-            src="/homeBackgroundHighRes.jpg"
-            alt="Tło"
-            className={`background ${loaded ? "" : "hidden"}`}
-            onLoad={handleLoaded}
-          />
-        </picture>
-        <div className="siteTitle">
-          <Typewriter class="typewriter" word="Arteterapia" delay={5000} />
-          <h3>Dla kreatywnych nie ma granic</h3>
+          <h2>Dla kreatywnych nie ma granic</h2>
         </div>
       </header>
     </div>
