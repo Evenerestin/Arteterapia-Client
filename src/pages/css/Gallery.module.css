@@ -38,7 +38,7 @@ html {
 
 .objectContainer {
   scroll-snap-align: center;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
   padding-top: 3rem;
 }
 

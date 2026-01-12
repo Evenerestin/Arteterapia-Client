@@ -1,7 +1,3 @@
-#didactics {
-  background: rgb(30, 30, 30);
-}
-
 .header {
   height: 100svh;
   width: 100%;
@@ -10,6 +6,7 @@
   position: relative;
   background-size: cover;
   backdrop-filter: blur(5px);
+  background: rgb(30, 30, 30);
 }
 
 .header::after {
@@ -20,7 +17,6 @@
   width: 100%;
   height: 45%;
   z-index: 5;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
   background: linear-gradient(
     0deg,
     rgba(30, 30, 30) 5%,
@@ -46,8 +42,8 @@
 }
 
 .content {
-  min-height: 100svh;
   background: rgb(30, 30, 30);
+  min-height: 100svh;
   padding: 4rem 0 6rem;
 }
 

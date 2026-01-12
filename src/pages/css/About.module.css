@@ -74,7 +74,7 @@ header .hook svg {
 .snap {
   background: white;
   width: 100%;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
   scroll-snap-align: center;
 }
 
